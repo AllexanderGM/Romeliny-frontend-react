@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -7,10 +7,274 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
     <title>Romeliny</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
+    <!-- Start header -->
+
+    <header>
+        <div class="header-left">
+            <figure class="menu" id="abrirAside">
+                <div>
+                    <div class="menu__component"></div>
+                    <div class="menu__component"></div>
+                </div>
+                <div>
+                    <div class="menu__component"></div>
+                    <div class="menu__component"></div>
+                </div>
+            </figure>
+            <a href="#" class="logo-header">
+                <img class="logo-header__img" src="./assets/Logo.svg" alt="Imagen del logo">
+                <h3 class="logo-header__text">
+                    R<span>o</span>meliny
+                </h3>
+            </a>
+        </div>
+        <nav class="nav-header-center">
+            <ul class="nav-header__list">
+                <li class="nav-header__list__item">
+                    <a href="">
+                        <h4>
+                            Novedades
+                        </h4>
+                    </a>
+                </li>
+                <li class="nav-header__list__item">
+                    <a href="">
+                        <h4>
+                            Tienda
+                        </h4>
+                    </a>
+                </li>
+                <li class="nav-header__list__item">
+                    <a href="">
+                        <h4>
+                            Contacto
+                        </h4>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <nav class="nav-header-rigth">
+            <ul class="nav-header__list">
+                <li class="nav-header__list__item">
+                    <ion-icon class="abrirLogin" name="person-circle-outline"></ion-icon>
+                </li>
+                <li class="nav-header__list__item">
+                    <a href="">
+                        <ion-icon name="cart-outline"></ion-icon>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- End header -->
+    <!-- Start Aside left -->
+
+    <aside class="aside-left-cerrado">
+        <section class="logo-aside">
+            <figure class="menu" id="cerrarAside">
+                <div>
+                    <div class="menu__component"></div>
+                    <div class="menu__component"></div>
+                </div>
+                <div>
+                    <div class="menu__component"></div>
+                    <div class="menu__component"></div>
+                </div>
+            </figure>
+            <a href="./index.html" class="logo-header">
+                <img class="logo-header__img" src="./assets/Logo.svg" alt="Imagen del logo">
+                <h3 class="logo-header__text">
+                    R<span>o</span>meliny
+                </h3>
+            </a>
+        </section>
+
+        <div class="separador-aside"></div>
+
+        <section class="nav-aside">
+            <h3>
+                Navegación
+            </h3>
+            <nav>
+                <ul class="nav-header__list">
+                    <li class="nav-header__list__item">
+                        <a href="">
+                            <ion-icon name="newspaper-outline"></ion-icon>
+                            <h4>
+                                Novedades
+                            </h4>
+                        </a>
+                    </li>
+                    <li class="nav-header__list__item">
+                        <a href="">
+                            <ion-icon name="storefront-outline"></ion-icon>
+                            <h4>
+                                Tienda
+                            </h4>
+                        </a>
+                    </li>
+                    <li class="nav-header__list__item">
+                        <a href="">
+                            <ion-icon name="call-outline"></ion-icon>
+                            <h4>
+                                Contacto
+                            </h4>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+
+        <div class="separador-aside"></div>
+
+        <section class="categories-aside">
+            <h3>
+                Categorías
+            </h3>
+            <nav>
+                <ul class="nav-header__list">
+                    <li class="nav-header__list__item">
+                        <a href="">
+                            <ion-icon name="bag-outline"></ion-icon>
+                            <h4>
+                                Formal
+                            </h4>
+                        </a>
+                    </li>
+                    <li class="nav-header__list__item">
+                        <a href="">
+                            <ion-icon name="footsteps-outline"></ion-icon>
+                            <h4>
+                                Casual
+                            </h4>
+                        </a>
+                    </li>
+                    <li class="nav-header__list__item">
+                        <a href="">
+                            <ion-icon name="bicycle-outline"></ion-icon>
+                            <h4>
+                                Deportivo
+                            </h4>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+
+        <div class="separador-aside"></div>
+
+        <section class="about">
+            <h3>
+                Acerca de Romeliny
+            </h3>
+            <nav>
+                <ul class="nav-header__list">
+                    <li class="nav-header__list__item">
+                        <a href="">
+                            <ion-icon name="diamond-outline"></ion-icon>
+                            <h4>
+                                Información corporativa
+                            </h4>
+                        </a>
+                    </li>
+                    <li class="nav-header__list__item">
+                        <a href="">
+                            <ion-icon name="document-text-outline"></ion-icon>
+                            <h4>
+                                Terminos y condiciones
+                            </h4>
+                        </a>
+                    </li>
+                    <li class="nav-header__list__item">
+                        <a href="">
+                            <ion-icon name="code-slash-outline"></ion-icon>
+                            <h4>
+                                Desarrollador web
+                            </h4>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+
+        <div class="separador-aside"></div>
+
+        <section class="social">
+            <h3>
+                Social
+            </h3>
+            <div class="social-div">
+                <a href="https://www.facebook.com/Romeliny1">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+                <a href="https://www.instagram.com/calzado_romeliny/">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+                <a href="">
+                    <ion-icon name="logo-whatsapp"></ion-icon>
+                </a>
+            </div>
+
+        </section>
+
+        <div class="separador-aside"></div>
+
+        <section class="derechos">
+            <p>
+                COPYRIGHT © 2021 ROMELINY
+            </p>
+        </section>
+
+    </aside>
+
+    <!-- End aside left -->
+    <!-- Start component login/register -->
+
+    <aside class="login-registrer-oculto">
+        <ion-icon class="cerrarLogin" name="close-circle-outline"></ion-icon>
+        <h3 class="login-registrer__title">
+            Iniciar sesión
+        </h3>
+        <form class="login-registrer__form" action="">
+            <label for="email">
+                <span>Correo</span>
+                <input type="email" id="email" placeholder=" ejemplo@romeliny.com" required />
+            </label>
+            <label for="password">
+                <span>Contraseña</span>
+                <input type="password" id="password" placeholder=" * * * * * * " required />
+            </label>
+            <button type="submit">Ingresar</button>
+        </form>
+        <a class="registro" href="">
+            <p>
+                ¿No estas registrado? <span> Registrate. </span>
+            </p>
+        </a>
+    </aside>
+
+    <main>
+
+    </main>
+    <footer>
+
+    </footer>
+
+    <script src="./scripts/app.js"></script>
+
+    <!-- Iconos -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
