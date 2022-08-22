@@ -41,6 +41,8 @@ header {
   justify-content: space-between;
   width: 100%;
   height: 80px;
+  background-color: var(--ColorClaro);
+  z-index: 1;
 }
 
 .header-left {
@@ -142,6 +144,7 @@ header {
 
 .nav-header__list__item ion-icon:hover {
   color: var(--ColorNaranja);
+  cursor: pointer;
   transition: 0.2s;
 }
 
@@ -157,14 +160,15 @@ header {
   background-color: var(--ColorClaro);
   border-right: 1px solid var(--ColorGrisObscuro);
   transition: 0.5s;
+  z-index: 1;
 }
 
 .aside-left-abierto {
+  position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  position: absolute;
   text-align: center;
   top: 0;
   left: 0;
@@ -173,6 +177,7 @@ header {
   background-color: var(--ColorClaro);
   border-right: 1px solid var(--ColorGrisObscuro);
   transition: 0.5s;
+  z-index: 1;
 }
 
 [class^="aside-left"] .nav-header__list {
@@ -257,7 +262,7 @@ header {
 /* Estilos para aside login/registrer */
 
 .login-registrer-oculto * {
-  position: absolute;
+  position: fixed;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -268,7 +273,7 @@ header {
 }
 
 .login-registrer-visible {
-  position: absolute;
+  position: fixed;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -277,6 +282,7 @@ header {
   width: 100vw;
   height: 100%;
   background-color: var(--ColorClaro);
+  z-index: 1;
 }
 
 .cerrarLogin {
@@ -355,54 +361,386 @@ header {
   text-decoration: underline;
 }
 
-/* Responsive */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-@media (min-width: 600px) {
-  .nav-header-center {
-    display: block;
-  }
+/* Estilos para las sección de presentación */
 
-  .aside-left-cerrado {
-    align-items: flex-start;
-    text-align: start;
-    padding-left: 40px;
-    width: 240px;
-  }
+.presentacion {
+  display: flex;
+  height: 85vh;
+}
 
-  .aside-left-abierto {
-    align-items: flex-start;
-    text-align: start;
-    padding-left: 40px;
-    width: 240px;
-  }
-  .about {
-    display: block;
-  }
+.presentacion article {
+  position: relative;
+  top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
-  .separador-aside:nth-of-type(3) {
-    display: block;
-  }
+.presentacion__title {
+  font-size: 4rem;
+  font-family: "Gwyner";
+  color: var(--ColorObscuro);
+  margin-bottom: 10px;
+}
 
-  .menu {
-    margin-left: 0;
-    position: sticky;
-  }
+.presentacion__title span {
+  font-family: "Gwyner";
+  color: var(--ColorNaranja);
+}
 
-  aside .logo-aside {
-    justify-content: flex-start;
-    margin-left: 0;
-  }
+.presentacion__subTitle {
+  color: var(--ColorGrisObscuro);
+  margin-bottom: 20px;
+  font-family: "Gwyner";
+  font-size: 1rem;
+  font-weight: 100;
+  letter-spacing: 0.9em;
+}
 
-  aside .logo-aside .logo-header {
-    margin-left: 20px;
-  }
+.separador__presentacion {
+  width: 280px;
+  height: 4px;
+  background-color: var(--ColorGris);
+  margin-bottom: 20px;
+}
 
-  .login-registrer-visible {
-    top: 55px;
-    right: 95px;
-    width: 350px;
-    height: 500px;
-    border: 1px solid var(--ColorGrisObscuro);
-    border-radius: 5px;
-  }
+.presentacion__text {
+  text-align: center;
+  color: var(--ColorGrisObscuro);
+  font-size: 1rem;
+  line-height: 200%;
+  margin-bottom: 40px;
+}
+
+.btn-presentacion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--ColorClaro);
+  height: 50px;
+  width: 180px;
+  background-color: var(--ColorNaranja);
+  border-radius: 5px;
+}
+
+.btn-presentacion:hover {
+  background-color: #fc291a;
+  box-shadow: 0px 0px 18px var(--ColorGris);
+}
+
+.presentacion__image {
+  display: none;
+}
+
+/* Estilos para la seccion categorias */
+
+.categorias {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100vw;
+  background-color: #fff;
+}
+
+.categorias .title {
+  margin: 70px 0;
+  display: flex;
+  align-items: center;
+}
+
+.separador__categoria {
+  width: 30px;
+  height: 3px;
+  background-color: var(--ColorGris);
+  margin: 0 20px;
+}
+
+.separador__categoria__title {
+  font-size: 1rem;
+}
+
+.categorias__contenedor-componentes {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+.conponent-categoria {
+  width: 100%;
+  height: 230px;
+  text-decoration: none;
+}
+
+#casual {
+  background-image: url("../assets/img/casual.jpg");
+  background-position: 0 -270px;
+  background-size: cover;
+}
+
+#formal {
+  background-image: url("../assets/img/elegante.jpg");
+  background-position: 0 -200px;
+  background-size: cover;
+}
+
+#deportivo {
+  background-image: url("../assets/img/deportivo.jpg");
+  background-position: 0 -150px;
+  background-size: cover;
+}
+
+.conponent-categoria__gradient {
+  height: 70%;
+  background: linear-gradient(
+    180.24deg,
+    #1e1e1ef6 38.59%,
+    rgba(30, 30, 30, 0) 99.79%
+  );
+}
+
+.conponent-categoria:hover .conponent-categoria__text {
+  color: var(--ColorNaranja);
+}
+
+.conponent-categoria__text {
+  color: var(--ColorClaro);
+  padding-top: 20px;
+}
+
+/* Estilos para la seccion productos */
+
+.productos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.productos__article {
+  margin: 50px 20px;
+}
+
+.productos__title {
+  font-weight: 600;
+}
+
+.productos__text {
+  margin-top: 20px;
+  line-height: 200%;
+  font-weight: 400;
+}
+
+.separador__productos {
+  width: 80vw;
+  height: 4px;
+  background-color: var(--ColorGris);
+}
+
+.productos__component {
+  margin: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.porductos__component__colum {
+  display: flex;
+}
+
+.productos__item {
+  margin: 10px 10px;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.productos__item img {
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+.productos__item p {
+  line-height: 200%;
+}
+
+/* Estilos para la seccion conocenos */
+
+.conocenos {
+  background-image: url("../assets/img/Background__Conocénos.png");
+  background-size: cover;
+  color: var(--ColorClaro);
+  text-align: center;
+  width: 100vw;
+  margin-bottom: 70px;
+}
+
+.conocenos__gradient {
+  background: rgba(2, 1, 0, 0.74);
+  backdrop-filter: blur(4px);
+  width: 100vw;
+}
+
+.conocenos__article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 10px;
+}
+
+.conocenos__article h1 {
+  font-weight: 600;
+}
+
+.conocenos__logo {
+  width: 220px;
+  margin: 20px 0;
+}
+
+.conocenos__article p {
+  width: 310px;
+  font-weight: 400;
+  line-height: 200%;
+  margin: 0 auto;
+}
+
+.conocenos__social {
+  margin: 20px 0;
+}
+
+.conocenos__social a {
+  text-decoration: none;
+  margin: 20px;
+}
+
+.conocenos__social img {
+  width: 50px;
+}
+
+.conocenos__social img:hover {
+  width: 46px;
+  padding: 2px;
+}
+
+/* Estilos para el footer */
+footer {
+  width: 100%;
+}
+
+.footer__information {
+  padding: 30px 30px 0px 30px;
+  background-color: var(--ColorGrisObscuro);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--ColorClaro);
+}
+
+.footer__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__logo img {
+  width: 150px;
+}
+
+.footer__social {
+  display: flex;
+  justify-content: center;
+}
+
+.footer__social a {
+  text-decoration: none;
+}
+
+.footer__social img {
+  width: 25px;
+  margin: 5px;
+}
+
+.footer__separador {
+  width: 80vw;
+  height: 4px;
+  background-color: var(--ColorClaro);
+  margin: 30px 0;
+}
+
+.footer__nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__nav ul {
+  list-style: none;
+  margin: 0 15px;
+}
+
+.footer__nav li {
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.footer__nav li a {
+  text-decoration: none;
+  color: var(--ColorClaro);
+}
+
+.footer__nav a:hover {
+  color: var(--ColorGris);
+}
+
+.developer {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.developer p b {
+  font-weight: 600;
+  line-height: 200%;
+}
+
+.developer figure {
+  display: flex;
+  justify-content: center;
+}
+
+.developer figure img {
+  width: 30px;
+  margin: 10px 5px;
+}
+
+.developer figure img:hover {
+  width: 28px;
+  padding: 1px;
+}
+
+.footer__derechos {
+  background-color: var(--ColorObscuro);
+  color: var(--ColorGris);
+}
+
+.footer__derechos p {
+  font-size: small;
+  line-height: 200%;
+  width: 270px;
+  text-align: center;
+  padding: 10px 0;
+  margin: 0 auto;
 }
