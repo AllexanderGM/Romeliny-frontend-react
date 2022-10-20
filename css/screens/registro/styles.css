@@ -1,0 +1,66 @@
+@import url("../../components/general.css");
+
+body {
+  height: 100vh;
+}
+
+main {
+  margin: 100px 0 60px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main .login-registrer__title {
+  text-align: center;
+}
+
+.form-izquierda {
+  margin-left: 40px;
+  padding-right: 20px;
+}
+
+.login-registrer__form label {
+  margin: 10px;
+}
+
+.politicaDatos {
+  flex-direction: row-reverse !important;
+  align-items: center;
+}
+
+.politicaDatos span {
+  width: 250px;
+  font-size: small;
+}
+
+.politicaDatos span a {
+  color: var(--ColorNaranja);
+}
+
+.politicaDatos input {
+  width: 20px !important;
+  height: 20px !important;
+  margin: 0 10px;
+  margin-bottom: 10px;
+}
+
+.imgRegistro {
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 0;
+  height: 1000px;
+  width: 80vw;
+  overflow: hidden;
+  display: none;
+}
+
+.imgRegistro img {
+  height: 100%;
+  top: 10%;
+  left: -200%;
+}

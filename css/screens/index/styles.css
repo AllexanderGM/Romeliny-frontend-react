@@ -1,0 +1,270 @@
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilos para las sección de presentación */
+
+.presentacion {
+  display: flex;
+  height: 85vh;
+}
+
+.presentacion article {
+  position: relative;
+  top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.presentacion__title {
+  font-size: 4rem;
+  font-family: "Gwyner";
+  color: var(--ColorObscuro);
+  margin-bottom: 10px;
+}
+
+.presentacion__title span {
+  font-family: "Gwyner";
+  color: var(--ColorNaranja);
+}
+
+.presentacion__subTitle {
+  color: var(--ColorGrisObscuro);
+  margin-bottom: 20px;
+  font-family: "Gwyner";
+  font-size: 1rem;
+  font-weight: 100;
+  letter-spacing: 0.9em;
+}
+
+.separador__presentacion {
+  width: 280px;
+  height: 4px;
+  background-color: var(--ColorGris);
+  margin-bottom: 20px;
+}
+
+.presentacion__text {
+  text-align: center;
+  color: var(--ColorGrisObscuro);
+  font-size: 1rem;
+  line-height: 200%;
+  margin-bottom: 40px;
+}
+
+.btn-presentacion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--ColorClaro);
+  height: 50px;
+  width: 180px;
+  background-color: var(--ColorNaranja);
+  border-radius: 5px;
+}
+
+.btn-presentacion:hover {
+  background-color: #fc291a;
+  box-shadow: 0px 0px 18px var(--ColorGris);
+}
+
+.presentacion__image {
+  display: none;
+}
+
+/* Estilos para la seccion categorias */
+
+.categorias {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100vw;
+  background-color: #fff;
+}
+
+.categorias .title {
+  margin: 70px 0;
+  display: flex;
+  align-items: center;
+}
+
+.separador__categoria {
+  width: 30px;
+  height: 3px;
+  background-color: var(--ColorGris);
+  margin: 0 20px;
+}
+
+.separador__categoria__title {
+  font-size: 1rem;
+}
+
+.categorias__contenedor-componentes {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+.conponent-categoria {
+  width: 100%;
+  height: 230px;
+  text-decoration: none;
+}
+
+#casual {
+  background-image: url("../../../assets/img/casual.jpg");
+  background-position: 0 -270px;
+  background-size: cover;
+}
+
+#formal {
+  background-image: url("../../../assets/img/elegante.jpg");
+  background-position: 0 -200px;
+  background-size: cover;
+}
+
+#deportivo {
+  background-image: url("../../../assets/img/deportivo.jpg");
+  background-position: 0 -150px;
+  background-size: cover;
+}
+
+.conponent-categoria__gradient {
+  height: 70%;
+  background: linear-gradient(180.24deg, #1e1e1ef6 38.59%, rgba(30, 30, 30, 0) 99.79%);
+}
+
+.conponent-categoria:hover .conponent-categoria__text {
+  color: var(--ColorNaranja);
+}
+
+.conponent-categoria__text {
+  color: var(--ColorClaro);
+  padding-top: 20px;
+}
+
+/* Estilos para la seccion productos */
+
+.productos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.productos__article {
+  margin: 50px 20px;
+}
+
+.productos__title {
+  font-weight: 600;
+}
+
+.productos__text {
+  margin-top: 20px;
+  line-height: 200%;
+  font-weight: 400;
+}
+
+.separador__productos {
+  width: 80vw;
+  height: 4px;
+  background-color: var(--ColorGris);
+}
+
+.productos__component {
+  margin: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.porductos__component__colum {
+  display: flex;
+}
+
+.productos__item {
+  margin: 10px 10px;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.productos__item img {
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+.productos__item p {
+  line-height: 200%;
+}
+
+/* Estilos para la seccion conocenos */
+
+.conocenos {
+  background-image: url("../../../assets/img/Background__Conocénos.png");
+  background-size: cover;
+  color: var(--ColorClaro);
+  text-align: center;
+  width: 100vw;
+  margin-bottom: 70px;
+}
+
+.conocenos__gradient {
+  background: rgba(2, 1, 0, 0.74);
+  backdrop-filter: blur(4px);
+  width: 100vw;
+}
+
+.conocenos__article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 10px;
+}
+
+.conocenos__article h1 {
+  font-weight: 600;
+}
+
+.conocenos__logo {
+  width: 220px;
+  margin: 20px 0;
+}
+
+.conocenos__article p {
+  width: 310px;
+  font-weight: 400;
+  line-height: 200%;
+  margin: 0 auto;
+}
+
+.conocenos__social {
+  margin: 20px 0;
+}
+
+.conocenos__social a {
+  text-decoration: none;
+  margin: 20px;
+}
+
+.conocenos__social img {
+  width: 50px;
+}
+
+.conocenos__social img:hover {
+  width: 46px;
+  padding: 2px;
+}

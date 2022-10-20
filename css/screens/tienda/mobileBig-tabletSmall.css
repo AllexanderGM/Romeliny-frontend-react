@@ -14,7 +14,22 @@
   text-align: start;
   padding-left: 40px;
   width: 240px;
+  height: 100vh;
+  overflow: auto;
 }
+
+/* Scroll personalizado */
+
+.aside-left-abierto::-webkit-scrollbar {
+  width: 7px;
+}
+
+.aside-left-abierto::-webkit-scrollbar-thumb {
+  background-color: var(--ColorGris);
+  border-radius: 5px;
+  height: 70%;
+}
+
 .about {
   display: block;
 }
@@ -90,4 +105,20 @@ aside .logo-aside .logo-header {
 .conocenos,
 .conocenos__gradient {
   width: 95vw;
+}
+
+/* Estilos para la pantalla de registro */
+
+.main-registro {
+  flex-direction: row;
+  justify-content: space-between !important;
+}
+
+.imgRegistro {
+  display: block;
+}
+
+.imgRegistro img {
+  position: relative;
+  right: 500px;
 }

@@ -1,0 +1,116 @@
+@import url("../../components/general.css");
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-contacto {
+  margin-top: 100px;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+h1 {
+  font-size: 1.8rem;
+}
+
+.contacto-datos {
+  width: 95vw;
+}
+
+.contacto-datos__title {
+  width: 80vw;
+  margin-left: 30px;
+  text-align: center;
+}
+
+.datos__item {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  border: 1px solid var(--ColorGris);
+  border-radius: 10px;
+  margin: 20px;
+  padding: 20px;
+}
+
+.datos__item:hover {
+  box-shadow: 0px 0px 10px var(--ColorGris);
+}
+
+.datos__item ion-icon {
+  font-size: 32px;
+  margin-right: 20px;
+  color: var(--ColorNaranja);
+}
+
+.datos__item div h2 {
+  margin-bottom: 5px;
+}
+
+.contacto-social {
+  margin: 60px 0;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.contacto-social__item a {
+  margin: 10px;
+}
+
+.contacto-social__item a ion-icon {
+  font-size: 24px;
+  color: var(--ColorObscuro);
+}
+
+.contacto-social__item a ion-icon:hover {
+  color: var(--ColorNaranja);
+}
+
+/* Seccion del mensaje */
+
+.contacto-enviarMensaje {
+  width: 80vw;
+  text-align: center;
+}
+
+.contacto-enviarMensaje p {
+  margin: 20px 0;
+}
+
+.enviarMensaje label input {
+  height: 30px;
+  width: 95%;
+  margin: 7px 0;
+  padding: 0 10px;
+}
+
+.enviarMensaje .mensajeTextArea {
+  margin-top: 7px;
+  width: 95%;
+  height: 150px;
+  padding: 10px;
+}
+
+.enviarMensaje button {
+  margin-top: 7px;
+  margin-bottom: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--ColorClaro);
+  height: 50px;
+  width: 100%;
+  background-color: var(--ColorNaranja);
+  border-radius: 5px;
+}
+
+.enviarMensaje button:hover {
+  background-color: #fc291a;
+  box-shadow: 0px 0px 18px var(--ColorGris);
+}

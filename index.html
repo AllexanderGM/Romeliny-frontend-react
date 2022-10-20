@@ -11,23 +11,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Romeliny</title>
     <link rel="icon" href="./assets/Logo.svg">
-    <link rel="stylesheet" href="./css/styles.css">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
 
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="./css/screens/index/styles.css">
+
+    <!-- Componentes de la página -->
+
+    <!-- General -->
+    <link rel="stylesheet" href="./css/components/general.css">
+    <!-- Header -->
+    <link rel="stylesheet" href="./css/components/header.css">
+    <!-- Aside left (aside de información) -->
+    <link rel="stylesheet" href="./css/components/aside-left.css">
+    <!-- aside login -->
+    <link rel="stylesheet" href="./css/components/aside-login.css">
+    <!-- footer -->
+    <link rel="stylesheet" href="./css/components/footer.css">
+
     <!-- responsive -->
 
     <!-- Mobile big/tablet small -->
-    <link rel="stylesheet" href="./css/mobileBig-tabletSmall.css" media="screen and (min-width: 600px)">
+    <link rel="stylesheet" href="./css/screens/index/mobileBig-tabletSmall.css" media="screen and (min-width: 600px)">
     <!-- Tablet -->
-    <link rel="stylesheet" href="./css/tablet.css" media="screen and (min-width: 800px)">
+    <link rel="stylesheet" href="./css/screens/index/tablet.css" media="screen and (min-width: 800px)">
     <!-- BigTablet -->
-    <link rel="stylesheet" href="./css/bigTablet.css" media="screen and (min-width: 1024px)">
+    <link rel="stylesheet" href="./css/screens/index/bigTablet.css" media="screen and (min-width: 1024px)">
     <!-- Laptop -->
-    <link rel="stylesheet" href="./css/laptop.css" media="screen and (min-width: 1440px)">
+    <link rel="stylesheet" href="./css/screens/index/laptop.css" media="screen and (min-width: 1440px)">
 
 
     <!-- Meta datos complementarios -->
@@ -66,21 +82,21 @@
         <nav class="nav-header-center">
             <ul class="nav-header__list">
                 <li class="nav-header__list__item">
-                    <a href="https://www.instagram.com/calzado_romeliny/">
+                    <a href="https://www.instagram.com/calzado_romeliny/" target="_blank">
                         <h4>
                             Novedades
                         </h4>
                     </a>
                 </li>
                 <li class="nav-header__list__item">
-                    <a href="http://romeliny.com/tienda.html">
+                    <a href="tienda.html">
                         <h4>
                             Tienda
                         </h4>
                     </a>
                 </li>
                 <li class="nav-header__list__item">
-                    <a href="http://romeliny.com/contacto.html">
+                    <a href="contacto.html">
                         <h4>
                             Contacto
                         </h4>
@@ -134,7 +150,7 @@
             <nav>
                 <ul class="nav-header__list">
                     <li class="nav-header__list__item">
-                        <a href="https://www.instagram.com/calzado_romeliny/">
+                        <a href="https://www.instagram.com/calzado_romeliny/" target="_blank">
                             <ion-icon name="newspaper-outline"></ion-icon>
                             <h4>
                                 Novedades
@@ -142,7 +158,7 @@
                         </a>
                     </li>
                     <li class="nav-header__list__item">
-                        <a href="http://romeliny.com/tienda.html">
+                        <a href="./tienda.html">
                             <ion-icon name="storefront-outline"></ion-icon>
                             <h4>
                                 Tienda
@@ -150,7 +166,7 @@
                         </a>
                     </li>
                     <li class="nav-header__list__item">
-                        <a href="http://romeliny.com/contacto.html">
+                        <a href="./contacto.html">
                             <ion-icon name="call-outline"></ion-icon>
                             <h4>
                                 Contacto
@@ -206,7 +222,7 @@
             <nav>
                 <ul class="nav-header__list">
                     <li class="nav-header__list__item">
-                        <a href="">
+                        <a href="" target="_blank">
                             <ion-icon name="diamond-outline"></ion-icon>
                             <h4>
                                 Información corporativa
@@ -214,7 +230,7 @@
                         </a>
                     </li>
                     <li class="nav-header__list__item">
-                        <a href="">
+                        <a href="" target="_blank">
                             <ion-icon name="document-text-outline"></ion-icon>
                             <h4>
                                 Terminos y condiciones
@@ -222,7 +238,7 @@
                         </a>
                     </li>
                     <li class="nav-header__list__item">
-                        <a href="">
+                        <a href="" target="_blank">
                             <ion-icon name="code-slash-outline"></ion-icon>
                             <h4>
                                 Desarrollador web
@@ -240,14 +256,14 @@
                 Social
             </h3>
             <div class="social-div">
-                <a href="https://www.facebook.com/Romeliny1">
+                <a href="https://www.facebook.com/Romeliny1" target="_blank">
                     <ion-icon name="logo-facebook"></ion-icon>
                 </a>
-                <a href="https://www.instagram.com/calzado_romeliny/">
+                <a href="https://www.instagram.com/calzado_romeliny/" target="_blank">
                     <ion-icon name="logo-instagram"></ion-icon>
                 </a>
-                <a
-                    href="https://api.whatsapp.com/send/?phone=573142467055&text=Me+gustar%C3%ADa+tener+mas+informacion&type=phone_number&app_absent=0">
+                <a href="https://api.whatsapp.com/send/?phone=573142467055&text=Me+gustar%C3%ADa+tener+mas+informacion&type=phone_number&app_absent=0"
+                    target="_blank">
                     <ion-icon name="logo-whatsapp"></ion-icon>
                 </a>
             </div>
@@ -283,7 +299,7 @@
             </label>
             <button type="submit">Ingresar</button>
         </form>
-        <a class="registro" href="">
+        <a class="registro" href="./registro.html">
             <p>
                 ¿No estas registrado? <span> Registrate. </span>
             </p>
@@ -406,14 +422,14 @@
                         mejores materiales, garantizando calidad y duración.
                     </p>
                     <figure class="conocenos__social">
-                        <a
-                            href="https://api.whatsapp.com/send/?phone=573142467055&text=Me+gustar%C3%ADa+tener+mas+informacion&type=phone_number&app_absent=0">
+                        <a href="https://api.whatsapp.com/send/?phone=573142467055&text=Me+gustar%C3%ADa+tener+mas+informacion&type=phone_number&app_absent=0"
+                            target="_blank">
                             <img src="./assets/iconos/whatsapp.svg" alt="">
                         </a>
-                        <a href="https://www.facebook.com/Romeliny1">
+                        <a href="https://www.facebook.com/Romeliny1" target="_blank">
                             <img src="./assets/iconos/facebook.svg" alt="">
                         </a>
-                        <a href="https://www.instagram.com/calzado_romeliny/">
+                        <a href="https://www.instagram.com/calzado_romeliny/" target="_blank">
                             <img src="./assets/iconos/instagram.svg" alt="">
                         </a>
                     </figure>
@@ -430,14 +446,14 @@
                     <img src="./assets/img/logo-white.svg" alt="">
                 </figure>
                 <div class="footer__social">
-                    <a
-                        href="https://api.whatsapp.com/send/?phone=573142467055&text=Me+gustar%C3%ADa+tener+mas+informacion&type=phone_number&app_absent=0">
-                        <img src="./assets/iconos/whatsapp.svg" alt="">
+                    <a href="https://api.whatsapp.com/send/?phone=573142467055&text=Me+gustar%C3%ADa+tener+mas+informacion&type=phone_number&app_absent=0"
+                        target="_blank">
+                        <img src="./assets/iconos/whatsapp.svg" alt="" target="_blank">
                     </a>
                     <a href="https://www.facebook.com/Romeliny1">
-                        <img src="./assets/iconos/facebook.svg" alt="">
+                        <img src="./assets/iconos/facebook.svg" alt="" target="_blank">
                     </a>
-                    <a href="https://www.instagram.com/calzado_romeliny/">
+                    <a href="https://www.instagram.com/calzado_romeliny/" target="_blank">
                         <img src="./assets/iconos/instagram.svg" alt="">
                     </a>
                 </div>
@@ -449,17 +465,17 @@
                         INFORMACIÖN
                     </li>
                     <li>
-                        <a href="http://romeliny.com/contacto.html">
+                        <a href="./nosotros.html">
                             Conocénos
                         </a>
                     </li>
                     <li>
-                        <a href="http://romeliny.com/contacto.html">
+                        <a href="./contacto.html">
                             Contáctanos
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="" target="_blank">
                             Terminos y condiciones
                         </a>
                     </li>
@@ -469,18 +485,19 @@
                         SOCIAL
                     </li>
                     <li>
-                        <a href="https://www.facebook.com/Romeliny1">
+                        <a href="https://www.facebook.com/Romeliny1" target="_blank">
                             Facebook
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.instagram.com/calzado_romeliny/"">
+                        <a href="https://www.instagram.com/calzado_romeliny/" target="_blank">
                             Instagram
                         </a>
                     </li>
                     <li>
                         <a href="
-                            https://api.whatsapp.com/send/?phone=573142467055&text=Me+gustar%C3%ADa+tener+mas+informacion&type=phone_number&app_absent=0">
+                            https://api.whatsapp.com/send/?phone=573142467055&text=Me+gustar%C3%ADa+tener+mas+informacion&type=phone_number&app_absent=0"
+                            target="_blank">
                             Whatsapp
                         </a>
                     </li>
@@ -492,13 +509,13 @@
                     Jeisson Gavilán
                 </p>
                 <figure>
-                    <a href="https://jeissonalexander.000webhostapp.com/index.html">
+                    <a href="https://alexander206.github.io/" target="_blank">
                         <img src="./assets/iconos/web.svg" alt="">
                     </a>
-                    <a href="https://www.instagram.com/amarokdev/">
+                    <a href="https://www.instagram.com/amarokdev/" target="_blank">
                         <img src="./assets/iconos/instagram.svg" alt="">
                     </a>
-                    <a href="https://www.linkedin.com/in/jeisson-alexander/">
+                    <a href="https://www.linkedin.com/in/jeisson-alexander/" target="_blank">
                         <img src="./assets/iconos/linkedin.svg" alt="">
                     </a>
                 </figure>

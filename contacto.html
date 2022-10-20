@@ -19,7 +19,7 @@
 
     <!-- CSS -->
 
-    <link rel="stylesheet" href="./css/screens/registro/styles.css">
+    <link rel="stylesheet" href="./css/screens/contacto/styles.css">
 
     <!-- Componentes de la página -->
 
@@ -37,13 +37,15 @@
     <!-- responsive -->
 
     <!-- Mobile big/tablet small -->
-    <link rel="stylesheet" href="./css/screens/registro/mobileBig.css" media="screen and (min-width: 600px)">
+    <link rel="stylesheet" href="./css/screens/contacto/mobileBig-tabletSmall.css"
+        media="screen and (min-width: 600px)">
     <!-- Tablet -->
-    <link rel="stylesheet" href="./css/screens/registro/tablet.css" media="screen and (min-width: 800px)">
+    <link rel="stylesheet" href="./css/screens/contacto/tablet.css" media="screen and (min-width: 800px)">
     <!-- BigTablet -->
-    <link rel="stylesheet" href="./css/screens/registro/bigTablet.css" media="screen and (min-width: 1024px)">
+    <link rel="stylesheet" href="./css/screens/contacto/bigTablet.css" media="screen and (min-width: 1024px)">
     <!-- Laptop -->
-    <link rel="stylesheet" href="./css/screens/registro/laptop.css" media="screen and (min-width: 1440px)">
+    <link rel="stylesheet" href="./css/screens/contacto/laptop.css" media="screen and (min-width: 1440px)">
+
 
     <!-- Meta datos complementarios -->
     <meta name="description"
@@ -306,47 +308,78 @@
     </aside>
 
     <!-- End header, aside left & login -->
-    <!-- Start main  store -->
+    <!-- Start principal main -->
 
-    <main class="main-registro">
-        <figure class="imgRegistro">
-            <img src="./assets/img/registro.jpg" alt="">
-        </figure>
-        <section class="form-izquierda">
-            <h3 class="login-registrer__title">
-                Registrarse
-            </h3>
-            <form class="login-registrer__form" action="">
-                <label for="Nombre">
-                    <span>Nombre</span>
-                    <input type="name" id="name" placeholder=" Tu nombre" required />
+    <main class="main-contacto">
+        <section class="contacto-datos">
+            <h1 class="contacto-datos__title">
+                Ponte en contacto con nosotros
+            </h1>
+            <ul class="datos">
+                <li class="datos__item">
+                    <ion-icon name="location-outline"></ion-icon>
+                    <div>
+                        <h2>Nuestra oficina principal</h2>
+                        <p>Calle 20 #24f-49 sur barrio el restrepo</p>
+                    </div>
+                </li>
+                <li class="datos__item">
+                    <ion-icon name="call-outline"></ion-icon>
+                    <div>
+                        <h2>LLamadas</h2>
+                        <p>+57 314 246 70 55</p>
+                    </div>
+                </li>
+                <li class="datos__item">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <div>
+                        <h2>Correo electrónico</h2>
+                        <p>calzadoromeliny2004@gmail.com</p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="contacto-social">
+                <li class="contacto-social__item">
+                    <a href="https://www.facebook.com/Romeliny1">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                </li>
+                <li class="contacto-social__item">
+                    <a href="https://www.instagram.com/calzado_romeliny/">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                </li>
+                <li class="contacto-social__item">
+                    <a
+                        href="https://api.whatsapp.com/send/?phone=573142467055&text=Me+gustar%C3%ADa+tener+mas+informacion&type=phone_number&app_absent=0">
+                        <ion-icon name="logo-whatsapp"></ion-icon>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <section class="contacto-enviarMensaje">
+
+            <h1>Envianos un mensaje</h1>
+            <p>
+                Recuerda antes de enviar un mensaje identificarte y agregar el asunto. Espero tu mensaje.
+            </p>
+
+            <form class="enviarMensaje" action="">
+                <label for="name">
+                    <input type="text" id="name" placeholder="Nombre" required />
                 </label>
-                <label for="email">
-                    <span>Correo</span>
-                    <input type="email" id="email" placeholder=" ejemplo@romeliny.com" required />
+                <label for="correo">
+                    <input type="email" id="email" placeholder="Correo electrónico" required />
                 </label>
-                <label for="phone">
-                    <span>Telefono (Opcional)</span>
-                    <input type="phone" id="phone" placeholder=" 322 123 45 67" />
+                <label for="asunto">
+                    <input type="text" id="asunto" placeholder="Asunto" required />
                 </label>
-                <label for="password">
-                    <span>Contraseña</span>
-                    <input type="password" id="password" placeholder=" * * * * * * " required />
+                <label for="mensaje">
+                    <textarea class="mensajeTextArea" id="mensaje" name="mensaje" rows="6"
+                        placeholder="Tu mensaje ..."></textarea>
                 </label>
-                <label for="passwordConfirm">
-                    <span>Confirmar contraseña</span>
-                    <input type="password" id="passwordConfirm" placeholder=" * * * * * * " required />
-                </label>
-                <label for="politicaDatos" class="politicaDatos">
-                    <span>
-                        Para continuar tienes que aceptar las <a href="">Condiciones de uso</a>, nuestro <a
-                            href="">Aviso de
-                            privacidad</a> y nuestras <a href=""> Condiciones de Cookies y publicidad en
-                            internet</a>
-                    </span>
-                    <input type="checkbox" required>
-                </label>
-                <button type="submit">Registrarse</button>
+
+                <button type="submit">Enviar</button>
             </form>
         </section>
     </main>
@@ -445,7 +478,6 @@
     <!-- Iconos -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
 </body>
 
 </html>

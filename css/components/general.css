@@ -1,0 +1,43 @@
+:root {
+  /* Paleta de colores */
+  --ColorClaro: #f7f4ef;
+  --ColorNaranja: #ff4a3c;
+  --ColorObscuro: #020100;
+  --ColorGris: #d9d9d9;
+  --ColorGrisObscuro: #3b3e43;
+}
+
+/* Fuentes */
+
+@font-face {
+  font-family: "Gwyner";
+  src: url("../../assets/fonts/Gwyner-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  transition: 0.2s;
+}
+
+body {
+  background-color: var(--ColorClaro);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body::-webkit-scrollbar {
+  width: 7px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--ColorGris);
+  border-radius: 5px;
+  height: 70%;
+}
