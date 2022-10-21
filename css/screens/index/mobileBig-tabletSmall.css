@@ -1,35 +1,3 @@
-.nav-header-center {
-  display: block;
-}
-
-.aside-left-cerrado {
-  align-items: flex-start;
-  text-align: start;
-  padding-left: 40px;
-  width: 240px;
-}
-
-.aside-left-abierto {
-  align-items: flex-start;
-  text-align: start;
-  padding-left: 40px;
-  width: 240px;
-  height: 100vh;
-  overflow: auto;
-}
-
-/* Scroll personalizado */
-
-.aside-left-abierto::-webkit-scrollbar {
-  width: 7px;
-}
-
-.aside-left-abierto::-webkit-scrollbar-thumb {
-  background-color: var(--ColorGris);
-  border-radius: 5px;
-  height: 70%;
-}
-
 .about {
   display: block;
 }

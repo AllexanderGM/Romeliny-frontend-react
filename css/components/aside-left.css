@@ -30,6 +30,18 @@
   z-index: 1;
 }
 
+/* Scroll personalizado */
+
+.aside-left-abierto::-webkit-scrollbar {
+  width: 7px;
+}
+
+.aside-left-abierto::-webkit-scrollbar-thumb {
+  background-color: var(--ColorGris);
+  border-radius: 5px;
+  height: 70%;
+}
+
 [class^="aside-left"] .nav-header__list {
   display: inline;
 }
@@ -107,4 +119,25 @@
 
 .derechos {
   font-size: 0.8rem;
+}
+
+@media (min-width: 600px) {
+  .aside-left-cerrado {
+    align-items: flex-start;
+    text-align: start;
+    padding-left: 40px;
+    width: 240px;
+  }
+
+  .aside-left-abierto {
+    align-items: flex-start;
+    text-align: start;
+    padding-left: 40px;
+    width: 240px;
+    height: 100vh;
+    overflow: auto;
+  }
+}
+
+@media (min-wifth: 1024px) {
 }

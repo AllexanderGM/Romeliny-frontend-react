@@ -113,3 +113,9 @@ header {
   cursor: pointer;
   transition: 0.2s;
 }
+
+@media (min-width: 600px) {
+  .nav-header-center {
+    display: block;
+  }
+}

@@ -106,3 +106,28 @@ footer {
   padding: 10px 0;
   margin: 0 auto;
 }
+
+@media (min-width: 800px) {
+  .footer__information {
+    padding-top: 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .footer__separador {
+    width: 2px;
+    height: 180px;
+    margin: 30px;
+  }
+
+  .footer__derechos p {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer__nav ul {
+    margin: 0 5vw;
+  }
+}

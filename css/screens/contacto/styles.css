@@ -87,6 +87,7 @@ h1 {
   width: 95%;
   margin: 7px 0;
   padding: 0 10px;
+  border: 1px solid var(--ColorGrisObscuro);
 }
 
 .enviarMensaje .mensajeTextArea {
@@ -108,6 +109,7 @@ h1 {
   width: 100%;
   background-color: var(--ColorNaranja);
   border-radius: 5px;
+  border: none;
 }
 
 .enviarMensaje button:hover {

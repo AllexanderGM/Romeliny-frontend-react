@@ -69,20 +69,3 @@
   top: 0px;
   left: 15px;
 }
-
-.footer__information {
-  padding-top: 0;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.footer__separador {
-  width: 2px;
-  height: 180px;
-  margin: 30px;
-}
-
-.footer__derechos p {
-  width: 100%;
-}
