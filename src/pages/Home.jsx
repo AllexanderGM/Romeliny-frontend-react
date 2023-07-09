@@ -14,9 +14,9 @@ import HomeAbout from "../components/HomeAbout.jsx";
 import "../styles/pages/home.scss";
 
 //* Data *//
-import imgPresentation from "../assets/img/imgMain.webp";
-import backgroundAbout from "../assets/img/bgAbout.webp";
-import logoCircle from "../assets/img/logoWhite.webp";
+import imgPresentation from "../assets/img/imgmain.webp";
+import backgroundAbout from "../assets/img/bgabout.webp";
+import logoCircle from "../assets/img/logoWhite.webpp";
 
 import casual from "../assets/img/casual.jpg";
 import formal from "../assets/img/formal.jpg";
