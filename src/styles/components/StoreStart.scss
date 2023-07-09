@@ -1,0 +1,40 @@
+@import "../components/molecules/storeCarousel.scss";
+@import "../components/atoms/storeCategory.scss";
+
+@mixin storeStart {
+    .start {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 127rem;
+
+        /* Estilos del banner */
+        @include storeCarousel;
+
+        .start_title {
+            color: var(--neutralDark);
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-top: 3rem;
+        }
+
+        .start_separator {
+            margin: 20px;
+            width: 250px;
+            height: 4px;
+            background-color: var(--neutral);
+        }
+
+        /* Estilos para el categorizador de productos */
+        @include storeCategory;
+    }
+
+    @media (min-width: 800px) {
+        .start .start_separator {
+            align-self: flex-start;
+            margin-left: 50px;
+            width: 100px;
+        }
+    }
+}

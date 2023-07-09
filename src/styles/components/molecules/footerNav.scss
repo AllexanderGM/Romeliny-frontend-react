@@ -1,0 +1,25 @@
+@import "../atoms/LinkTextRoute.scss";
+
+@mixin footerNav {
+    .footer_nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        ul {
+            list-style: none;
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin: 0 15px;
+            padding: 0;
+
+            @include LinkTextRoute;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .footer_nav ul {
+            margin: 0 5vw;
+        }
+    }
+}

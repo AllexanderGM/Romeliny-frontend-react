@@ -1,0 +1,97 @@
+@import "../atoms/storeProductContainer.scss";
+
+@mixin storeProduct {
+    .product {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 320px;
+        min-height: 450px;
+        max-height: 650px;
+        font-size: 1rem;
+        text-align: center;
+        border: 1px solid var(--neutral);
+        border-radius: 10px;
+        padding: 20px 30px;
+        margin: 30px 0;
+        transition: 0.2s;
+
+        &:hover {
+            box-shadow: 0px 0px 10px var(--neutral);
+            transition: 0.2s;
+        }
+
+        * {
+            margin: 10px 0;
+        }
+
+        h1 {
+            color: var(--neutralDark);
+            font-size: 1.8rem;
+            font-weight: 400;
+            align-self: flex-start;
+        }
+
+        p {
+            align-self: flex-start;
+            text-align: left;
+            font-size: 1.4rem;
+
+            strong {
+                font-weight: 500;
+                color: var(--black);
+            }
+        }
+
+        .product_img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            width: 260px;
+            height: 200px;
+            border: 1px solid var(--neutral);
+            border-radius: 10px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        @include storeProductContainer;
+
+        .product_price .price {
+            font-size: 2.2rem;
+            color: var(--neutralDark);
+        }
+
+        .product_btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.4rem;
+            color: var(--light);
+            height: 50px;
+            width: 150px;
+            background-color: var(--primary);
+            border-radius: 5px;
+            border: none;
+            transition: 0.2s;
+
+            &:hover {
+                cursor: pointer;
+                background-color: var(--primaryHover);
+                box-shadow: 0px 0px 18px var(--neutral);
+                transition: 0.2s;
+            }
+        }
+    }
+
+    @media (min-width: 800px) {
+        .product .product_title {
+            align-self: flex-start;
+        }
+    }
+}

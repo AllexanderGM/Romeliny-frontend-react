@@ -1,0 +1,29 @@
+@mixin btnMenu {
+    .btn_menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.7rem;
+        height: 2.7rem;
+        background-color: transparent;
+
+        transition: 0.2s;
+        margin: 0;
+
+        ion-icon {
+            font-size: 2.4rem;
+            color: var(--dark);
+            transition: 0.2s;
+        }
+
+        &:hover {
+            cursor: pointer;
+            background-color: transparent;
+
+            ion-icon {
+                font-size: 2.6rem;
+                transition: 0.2s;
+            }
+        }
+    }
+}

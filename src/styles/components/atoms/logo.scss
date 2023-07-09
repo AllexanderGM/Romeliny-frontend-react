@@ -1,0 +1,28 @@
+@mixin logo {
+    .header_logo {
+        position: relative;
+        bottom: 0.3rem;
+        text-decoration: none;
+        display: flex;
+        align-items: flex-end;
+
+        .header_logo_img {
+            width: 3.2rem;
+            margin: 0 1rem;
+            margin-right: 0.2rem;
+        }
+
+        .header_logo_text {
+            position: relative;
+            bottom: -0.5rem;
+            color: var(--dark);
+            font-size: 1.8rem;
+            font-family: "Gwyner";
+            margin: 0;
+
+            span {
+                color: var(--primary);
+            }
+        }
+    }
+}

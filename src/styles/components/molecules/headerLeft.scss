@@ -1,0 +1,13 @@
+@import "../atoms/btnMenu.scss";
+@import "../atoms/logo.scss";
+
+@mixin headerLeft {
+    .header_left {
+        display: flex;
+        align-items: flex-end;
+        margin-left: 3rem;
+
+        @include btnMenu;
+        @include logo;
+    }
+}

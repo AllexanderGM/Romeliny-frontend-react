@@ -1,0 +1,29 @@
+@import "../components/molecules/loginForm.scss";
+@import "../components/molecules/contactForm.scss";
+
+@mixin contactMessage {
+    .contact_menssage {
+        width: 80%;
+        text-align: center;
+        margin: 4rem 0;
+
+        h1 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            font-size: 1.4rem;
+            margin: 20px 0;
+        }
+
+        @include loginForm;
+        @include contactForm;
+    }
+
+    @media (min-width: 800px) {
+        .contact_menssage {
+            width: 40%;
+            margin: 0;
+        }
+    }
+}

@@ -1,0 +1,77 @@
+@import "../components/molecules/footerLogo.scss";
+@import "../components/atoms/footerSeparator.scss";
+@import "../components/molecules/footerNav.scss";
+@import "../components/molecules/footerTeam.scss";
+
+@mixin footer {
+    footer {
+        width: 100%;
+        background-color: var(--neutralDark);
+        bottom: 0;
+
+        .footer_container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+
+            .footer_information {
+                padding: 30px 30px 0px 30px;
+                background-color: var(--neutralDark);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                color: var(--light);
+                max-width: 127rem;
+
+                @include footerLogo;
+
+                @include footerSeparator;
+
+                @include footerNav;
+
+                .team {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 4rem;
+
+                    @include footerTeam;
+                }
+            }
+
+            .footer_duty {
+                background-color: var(--dark);
+                color: var(--neutral);
+                width: 100%;
+
+                p {
+                    font-size: small;
+                    line-height: 200%;
+                    width: 270px;
+                    text-align: center;
+                    padding: 10px 0;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 800px) {
+        footer {
+            .footer_container {
+                .footer_information {
+                    padding-top: 0;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-around;
+                }
+
+                .footer_duty p {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
