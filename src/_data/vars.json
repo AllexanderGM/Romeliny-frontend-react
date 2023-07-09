@@ -1,0 +1,48 @@
+{
+    "url_api": "http://localhost:8080",
+    "user": true,
+    "userAdmin": true,
+
+    "routes": {
+        "home": "/",
+        "store": "/store",
+        "contact": "/contact",
+        "about": "/about",
+        "notFound": "/notFound",
+        "register": "/register",
+        "corporateInformation": "/corpinfo",
+        "termsConditions": "/termsconditions",
+
+        "user": "/user",
+        "fullRegister": "/fullregister",
+        "cart": "/cart",
+
+        "admin": "/admin",
+        "products": "/products",
+        "users": "/users",
+        "carts": "/carts"
+    },
+
+    "links": {
+        "linkedin": "https://www.linkedin.com/company/calzadoromeliny/",
+        "facebook": "https://www.facebook.com/Romeliny1",
+        "instagram": "https://www.instagram.com/calzado_romeliny/",
+        "whatsapp": "https://api.whatsapp.com/send/?phone=573142467055&text=Me+gustar%C3%ADa+tener+mas+informacion&type=phone_number&app_absent=0",
+
+        "developer": {
+            "web": "",
+            "linkedin": "https://www.linkedin.com/in/jeisson-alexander/",
+            "instagram": "https://www.instagram.com/amarokdev/",
+            "github": "https://github.com/Alexander206"
+        },
+
+        "designer": {
+            "linkedin": "https://www.linkedin.com/in/angie-liliana-camargo-hern%C3%A1ndez-0b5072221/",
+            "instagram": "https://www.instagram.com/anli_cahe/"
+        }
+    },
+
+    "general": {
+        "plainLogo": "logo.svg"
+    }
+}

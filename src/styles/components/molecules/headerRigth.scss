@@ -1,0 +1,19 @@
+@import "../atoms/headerNavItem.scss";
+
+@mixin headerRight {
+    .header_rigth {
+        display: flex;
+        align-items: flex-end;
+        margin-right: 3rem;
+
+        .header_list {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+
+            @include headerNavItem;
+        }
+    }
+}

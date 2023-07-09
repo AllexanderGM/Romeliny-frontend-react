@@ -1,0 +1,24 @@
+@mixin asideLogo {
+    .aside_logo {
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin-left: 30px;
+
+        @include logo;
+
+        .header_logo {
+            margin-right: 5rem;
+        }
+
+        .btn_menu {
+            position: absolute;
+            right: 2rem;
+            top: -2rem;
+            font-size: 2.4rem;
+        }
+    }
+}

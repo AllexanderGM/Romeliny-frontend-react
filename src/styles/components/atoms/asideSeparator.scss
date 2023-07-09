@@ -1,0 +1,11 @@
+@mixin asideSeparator {
+    .asideSeparator {
+        width: 80%;
+        height: 2px;
+        background-color: var(--neutral);
+    }
+
+    .asideSeparator:nth-of-type(3) {
+        display: none;
+    }
+}

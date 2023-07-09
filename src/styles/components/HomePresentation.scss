@@ -1,0 +1,172 @@
+@mixin HomePresentation {
+    .presentation {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        max-width: 127rem;
+
+        .presentation_left {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .presentation_title {
+                font-size: 5.8rem;
+                font-family: "Gwyner";
+                color: var(--dark);
+                margin: 1rem 0;
+
+                span {
+                    font-family: "Gwyner";
+                    color: var(--primary);
+                }
+            }
+
+            .presentation_caption {
+                color: var(--neutralDark);
+                margin-bottom: 2rem;
+                font-family: "Gwyner";
+                font-size: 1.6rem;
+                font-weight: 100;
+                letter-spacing: 0.9rem;
+            }
+
+            .presentation_separator {
+                width: 25rem;
+                height: 0.4rem;
+                background-color: var(--neutral);
+                margin-bottom: 2rem;
+            }
+
+            .presentation_text {
+                text-align: center;
+                color: var(--neutralDark);
+                font-size: 1.4rem;
+                line-height: 200%;
+                margin-bottom: 4rem;
+            }
+
+            .presentation_btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+                font-size: 1.6rem;
+                color: var(--light);
+                height: 5rem;
+                width: 18rem;
+                background-color: var(--primary);
+                border-radius: 1rem;
+                margin-bottom: 6rem;
+                transition: 0.3s;
+
+                &:hover {
+                    background-color: var(--primaryHover);
+                    box-shadow: 0 0 1rem var(--neutral);
+                    transition: 0.3s;
+                }
+            }
+        }
+
+        .presentation_image {
+            overflow: hidden;
+            border-radius: 2rem;
+            display: none;
+        }
+    }
+
+    @media (min-width: 600px) {
+        .presentation .presentation_left {
+            .presentation_title {
+                font-size: 7rem;
+            }
+
+            .presentation_caption {
+                font-size: 1.8rem;
+            }
+        }
+    }
+
+    @media (min-width: 800px) {
+        .presentation {
+            .presentation_left {
+                .presentation_title {
+                    font-size: 6rem;
+                }
+
+                .presentation_caption {
+                    font-size: 1.6rem;
+                }
+
+                .presentation_separator {
+                    width: 28rem;
+                }
+            }
+
+            .presentation_image {
+                display: inline;
+                width: 37%;
+                max-width: 50rem;
+                margin: 0;
+                margin-top: 2rem;
+                margin-left: 10%;
+                margin-bottom: 6rem;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .presentation {
+            .presentation_left {
+                .presentation_title {
+                    font-size: 8rem;
+                }
+
+                .presentation_caption {
+                    font-size: 2rem;
+                }
+
+                .presentation_separator {
+                    width: 35rem;
+                }
+
+                .presentation_text {
+                    font-size: 1.6rem;
+                }
+            }
+
+            .presentation_image {
+                width: 38%;
+            }
+        }
+    }
+
+    @media (min-width: 1440px) {
+        .presentation {
+            .presentation_left {
+                .presentation_title {
+                    font-size: 8rem;
+                }
+
+                .presentation_caption {
+                    font-size: 2.2rem;
+                }
+
+                .presentation_separator {
+                    width: 33rem;
+                }
+            }
+
+            .presentacion__image {
+                width: 40%;
+            }
+        }
+    }
+}

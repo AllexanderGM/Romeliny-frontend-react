@@ -1,0 +1,16 @@
+@import "../components/StoreStart.scss";
+@import "../components/StoreProducts.scss";
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 100px;
+
+    /* Estilos para la seccion de inicio */
+
+    @include storeStart;
+    @include storeProducts;
+}

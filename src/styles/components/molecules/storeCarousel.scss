@@ -1,0 +1,29 @@
+@mixin storeCarousel {
+    .carousel {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 127rem;
+        max-height: 48rem;
+        overflow: hidden;
+
+        .carousel-inner {
+            display: flex;
+            align-items: center;
+
+            .carousel-item {
+                height: 100%;
+            }
+        }
+
+        [class^="carousel-control"] {
+            height: 100%;
+            background-color: transparent;
+
+            span {
+                margin: 0 1.5rem;
+            }
+        }
+    }
+}

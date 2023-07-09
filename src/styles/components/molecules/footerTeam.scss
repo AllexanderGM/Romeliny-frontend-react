@@ -1,0 +1,25 @@
+@import "../atoms/linkIcon.scss";
+
+@mixin footerTeam {
+    .developer {
+        font-size: 1.4rem;
+        text-align: center;
+        margin: 20px 0;
+
+        p b {
+            font-size: 1.6rem;
+            font-weight: 600;
+            line-height: 200%;
+        }
+
+        .footer_social {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+           
+            @include linkIcon;
+        }
+    }
+}

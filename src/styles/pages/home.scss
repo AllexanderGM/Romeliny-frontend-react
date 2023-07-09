@@ -1,0 +1,15 @@
+@import "../components/HomePresentation.scss";
+@import "../components/HomeCategories.scss";
+@import "../components/HomeProducts.scss";
+@import "../components/HomeAbout.scss";
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include HomePresentation;
+    @include HomeCategories;
+    @include homeProducts;
+    @include homeAbout;
+}

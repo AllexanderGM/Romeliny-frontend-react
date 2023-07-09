@@ -1,0 +1,62 @@
+@import "../components/atoms/logo.scss";
+
+@import "../components/atoms/asideSeparator.scss";
+@import "../components/molecules/asideLogo.scss";
+@import "../components/molecules/asideSection.scss";
+
+@mixin asideLeft {
+    .aside_left {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+        text-align: center;
+        background-color: var(--light);
+        border-right: 1px solid var(--neutralDark);
+
+        /* Scroll personalizado */
+        &::-webkit-scrollbar {
+            width: 7px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--ColorGris);
+            border-radius: 5px;
+            height: 70%;
+        }
+
+        @include asideSeparator;
+
+        @include asideLogo;
+
+        @include asideSection;
+    }
+
+    .duty {
+        font-size: 1.4rem;
+    }
+
+    @media (min-width: 600px) {
+        .aside_left {
+            align-items: flex-start;
+            text-align: start;
+            padding-left: 40px;
+            overflow: auto;
+
+            section {
+                &:nth-last-child(5) {
+                    display: inline;
+                }
+            }
+        }
+
+        .offcanvas.offcanvas-start {
+            width: 34rem;
+        }
+
+        .social_nav ion-icon {
+            margin: 1rem 2rem 1rem 0;
+        }
+    }
+}
