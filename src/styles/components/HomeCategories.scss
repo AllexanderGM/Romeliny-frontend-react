@@ -32,12 +32,23 @@
             margin-bottom: 6rem;
 
             .category {
+                position: relative;
+                bottom: 0;
                 width: 100%;
                 height: 23rem;
                 text-decoration: none;
                 border-top: 1px solid var(--neutral);
                 border-bottom: 1px solid var(--neutral);
+                border-radius: 1rem;
+                overflow: hidden;
                 margin: 1rem 0;
+                transition: 0.3s;
+
+                &:hover {
+                    bottom: 1rem;
+                    transition: 0.3s;
+                    box-shadow: 4px 4px 1rem var(--neutral);
+                }
 
                 .category_gradient {
                     height: 70%;
@@ -86,7 +97,6 @@
                     margin: 0 2rem;
                     width: 20rem;
                     height: 23rem;
-                    border: none;
                 }
 
                 #casual {

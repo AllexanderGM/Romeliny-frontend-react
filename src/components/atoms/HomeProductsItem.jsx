@@ -3,11 +3,9 @@ import PropTypes from "prop-types";
 
 // Principal component
 const HomeProductsItem = ({ img, text }) => {
-    const imgUrl = new URL(`../../assets/img/${img}`, import.meta.url).pathname;
-
     return (
         <div className="home_products_item">
-            <img src={imgUrl} alt="" />
+            <img src={img} alt="" />
             <p>{text}</p>
         </div>
     );

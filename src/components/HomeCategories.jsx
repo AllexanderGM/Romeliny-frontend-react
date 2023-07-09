@@ -13,8 +13,7 @@ const HomeCategories = ({ title, categoriesList }) => {
     const { routes } = useContext(GlobalContext);
 
     const categories = categoriesList.map((item, index) => {
-        const img = new URL(`../assets/img/${item.img}`, import.meta.url).pathname;
-        return <HomeCategory key={index} link={routes.store} id={item.id} img={img} name={item.name} />;
+        return <HomeCategory key={index} link={routes.store} id={item.id} img={item.img} name={item.name} />;
     });
 
     return (

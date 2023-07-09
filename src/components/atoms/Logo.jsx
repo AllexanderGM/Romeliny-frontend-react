@@ -4,17 +4,17 @@ import { useContext } from "react";
 // Context
 import GlobalContext from "../../context/GlobalContext.jsx";
 
+// Assets
+import logo from "../../assets/logo.webp";
+
 // Principal component
 const Logo = () => {
     // Datos obtenidos de context
-    const { routes, general } = useContext(GlobalContext);
-
-    // Construcción de la url para el logo
-    const urlLogo = new URL(`../../assets/${general.plainLogo}`, import.meta.url).pathname;
+    const { routes } = useContext(GlobalContext);
 
     return (
         <a href={routes.home} className="header_logo">
-            <img className="header_logo_img" src={urlLogo} alt="Imagen del logo de romeliny" />
+            <img className="header_logo_img" src={logo} alt="Imagen del logo de romeliny" />
             <h3 className="header_logo_text">
                 R<span>o</span>meliny
             </h3>

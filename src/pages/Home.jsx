@@ -14,14 +14,23 @@ import HomeAbout from "../components/HomeAbout.jsx";
 import "../styles/pages/home.scss";
 
 //* Data *//
-import imgPresentation from "../assets/img/imgMain.png";
-import backgroundAbout from "../assets/img/bgAbout.png";
-import logoCircle from "../assets/img/logoCircle.svg";
+import imgPresentation from "../assets/img/imgMain.webp";
+import backgroundAbout from "../assets/img/bgAbout.webp";
+import logoCircle from "../assets/img/logoWhite.webp";
+
+import casual from "../assets/img/casual.jpg";
+import formal from "../assets/img/formal.jpg";
+import deportivo from "../assets/img/deportivo.jpg";
 
 import whatsapp from "../assets/iconos/whatsapp.svg";
 import facebook from "../assets/iconos/facebook.svg";
 import instagram from "../assets/iconos/instagram.svg";
 import linkedin from "../assets/iconos/linkedin.svg";
+
+import economia from "../assets/img/economia.webp";
+import calidad from "../assets/img/calidad.webp";
+import envios from "../assets/img/envios.webp";
+import colombia from "../assets/img/colombia.webp";
 
 //* Principal Component *//
 const Home = () => {
@@ -43,17 +52,17 @@ const Home = () => {
                     categoriesList={[
                         {
                             id: "casual",
-                            img: "casual.jpg",
+                            img: casual,
                             name: "Casual",
                         },
                         {
                             id: "formal",
-                            img: "formal.jpg",
+                            img: formal,
                             name: "Formal",
                         },
                         {
                             id: "deportivo",
-                            img: "deportivo.jpg",
+                            img: deportivo,
                             name: "Deportivo",
                         },
                     ]}
@@ -68,10 +77,10 @@ const Home = () => {
                         "por el arte de crear zapatos.",
                     ]}
                     items={[
-                        { img: "economia.png", text: "Los mejores precios somos distribuidores" },
-                        { img: "calidad.png", text: "Productos con buena calidad y garantia" },
-                        { img: "envios.png", text: "Envios a nivel nacional" },
-                        { img: "colombia.png", text: "Producto 100% colombiano" },
+                        { img: economia, text: "Los mejores precios somos distribuidores" },
+                        { img: calidad, text: "Productos con buena calidad y garantia" },
+                        { img: envios, text: "Envios a nivel nacional" },
+                        { img: colombia, text: "Producto 100% colombiano" },
                     ]}
                 />
 
