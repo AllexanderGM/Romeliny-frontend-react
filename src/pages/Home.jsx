@@ -16,7 +16,7 @@ import "../styles/pages/home.scss";
 //* Data *//
 import imgPresentation from "../assets/img/imgmain.webp";
 import backgroundAbout from "../assets/img/bgabout.webp";
-import logoCircle from "../assets/img/logoWhite.webpp";
+import logoCircle from "../assets/img/logowhite.webpp";
 
 import casual from "../assets/img/casual.jpg";
 import formal from "../assets/img/formal.jpg";

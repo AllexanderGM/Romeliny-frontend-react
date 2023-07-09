@@ -11,7 +11,7 @@ import FooterTeam from "../components/molecules/FooterTeam.jsx";
 import GlobalContext from "../context/GlobalContext.jsx";
 
 // Resources
-import imgLogoWhite from "../assets/img/logo-white.svg";
+import imgLogoWhite from "../assets/img/logowhite.webp";
 
 const Footer = () => {
     // Data obtenida del contexto glabal
