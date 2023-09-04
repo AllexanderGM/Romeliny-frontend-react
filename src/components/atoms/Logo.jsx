@@ -10,7 +10,8 @@ import logo from "../../assets/logo.webp";
 // Principal component
 const Logo = () => {
     // Datos obtenidos de context
-    const { routes } = useContext(GlobalContext);
+    const { context } = useContext(GlobalContext);
+    const routes = context.routes;
 
     return (
         <a href={routes.home} className="header_logo">

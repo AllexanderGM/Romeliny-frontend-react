@@ -1,4 +1,5 @@
 // Dependencies
+import { useContext } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // * --- | Pages | --- * //
@@ -27,41 +28,39 @@ import ChangeBanners from "../pages/admin/ChangeBanners.jsx";
 // Context
 import GlobalContext from "../context/GlobalContext.jsx";
 
-// Resources
-import variables from "../_data/vars.json";
-const UserAuth = false;
-const AdminAuth = false;
-
 // Principal component
 function App() {
+    const { context } = useContext(GlobalContext);
+
+    const user = context.user;
+    const userAdmin = context.userAdmin;
+
     return (
-        <GlobalContext.Provider value={variables}>
-            <BrowserRouter>
-                <Routes>
-                    {/* General */}
-                    <Route exact path="/" element={<Home />} />
-                    <Route exact path="/store" element={<Store />} />
-                    <Route exact path="/contact" element={<Contact />} />
-                    <Route exact path="/about" element={<About />} />
-                    <Route exact path="/register" element={<Register />} />
-                    <Route path="*" element={<NotFount />} />
+        <BrowserRouter>
+            <Routes>
+                {/* General */}
+                <Route exact path="/" element={<Home />} />
+                <Route exact path="/store" element={<Store />} />
+                <Route exact path="/contact" element={<Contact />} />
+                <Route exact path="/about" element={<About />} />
+                <Route exact path="/register" element={<Register />} />
+                <Route path="*" element={<NotFount />} />
 
-                    {/* User */}
-                    <Route exact path="/user" element={UserAuth ? <User /> : <Home />} />
-                    <Route exact path="/fullregister" element={UserAuth ? <FullRegister /> : <Home />} />
-                    <Route exact path="/cart" element={UserAuth ? <Cart /> : <Home />} />
+                {/* User */}
+                <Route exact path="/user" element={user ? <User /> : <Home />} />
+                <Route exact path="/fullregister" element={user ? <FullRegister /> : <Home />} />
+                <Route exact path="/cart" element={user ? <Cart /> : <Home />} />
 
-                    {/* Admin */}
-                    <Route exact path="/dashboard" element={AdminAuth ? <Dashboard /> : <Home />} />
-                    <Route exact path="/products" element={AdminAuth ? <Products /> : <Home />} />
-                    <Route exact path="/users" element={AdminAuth ? <Users /> : <Home />} />
-                    <Route exact path="/carts" element={AdminAuth ? <Carts /> : <Home />} />
-                    <Route exact path="/updatedata" element={AdminAuth ? <UpdateData /> : <Home />} />
-                    <Route exact path="/massivemail" element={AdminAuth ? <MassiveMail /> : <Home />} />
-                    <Route exact path="/changebanners" element={AdminAuth ? <ChangeBanners /> : <Home />} />
-                </Routes>
-            </BrowserRouter>
-        </GlobalContext.Provider>
+                {/* Admin */}
+                <Route exact path="/dashboard" element={userAdmin ? <Dashboard /> : <Home />} />
+                <Route exact path="/products" element={userAdmin ? <Products /> : <Home />} />
+                <Route exact path="/users" element={userAdmin ? <Users /> : <Home />} />
+                <Route exact path="/carts" element={userAdmin ? <Carts /> : <Home />} />
+                <Route exact path="/updatedata" element={userAdmin ? <UpdateData /> : <Home />} />
+                <Route exact path="/massivemail" element={userAdmin ? <MassiveMail /> : <Home />} />
+                <Route exact path="/changebanners" element={userAdmin ? <ChangeBanners /> : <Home />} />
+            </Routes>
+        </BrowserRouter>
     );
 }
 

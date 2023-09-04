@@ -4,6 +4,9 @@
         align-items: center;
         justify-content: space-between;
         width: 100%;
+        border-top: 1px solid var(--neutral);
+        padding-top: 1.5rem;
+        margin-top: 0;
 
         .product_category {
             display: flex;

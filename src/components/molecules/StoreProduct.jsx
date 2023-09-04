@@ -9,7 +9,12 @@ import GlobalContext from "../../context/GlobalContext";
 
 // Principal component
 const StoreProduct = ({ img, category, name, description, code, stock, price }) => {
-    const { links } = useContext(GlobalContext);
+    const { context } = useContext(GlobalContext);
+
+    price = price.toLocaleString("es-CO", {
+        style: "currency",
+        currency: "COP",
+    });
 
     return (
         <div className="product">
@@ -17,32 +22,28 @@ const StoreProduct = ({ img, category, name, description, code, stock, price }) 
                 <img src={img} alt={`Imagen del producto ${name}`} />
             </figure>
 
-            <StoreProductContainer category={category} />
+            <div className="container_info">
+                <h1 className="product_title">{name}</h1>
 
-            <h1 className="product_title">{name}</h1>
+                <StoreProductContainer category={category} />
 
-            <p className="product_description">
-                {description}
-            </p>
-
-            <p className="product_code">
-                <strong>Referencia: </strong> {code}
-            </p>
-
-            {/* <p className="product_stock">
-                <strong>Existencia: </strong> {stock}
-            </p> */}
-
-            <p className="product_price">
-                <strong className="price">${price} </strong>
-            </p>
-
-            <a
-                href={`https://api.whatsapp.com/send/?phone=573142467055&text=Me+gustar%C3%ADa+tener+mas+informacion+del+producto+con+referencia+${code}&type=phone_number&app_absent=0`}
-                className="product_btn"
-            >
-                Comprar
-            </a>
+                <p className="product_description">{description}</p>
+                <p className="product_code">
+                    <strong>Referencia: </strong> {code}
+                </p>
+                {/* <p className="product_stock">
+                    <strong>Existencia: </strong> {stock}
+                </p> */}
+                <p className="product_price">
+                    <strong className="price">{price} </strong>
+                </p>
+                <a
+                    href={`https://api.whatsapp.com/send/?phone=573142467055&text=Me+gustar%C3%ADa+tener+mas+informacion+del+producto+${name}+con+referencia+${code}&type=phone_number&app_absent=0`}
+                    className="product_btn"
+                >
+                    Comprar
+                </a>
+            </div>
         </div>
     );
 };

@@ -10,7 +10,8 @@ import GlobalContext from "../context/GlobalContext.jsx";
 
 // Principal component
 const HomeCategories = ({ title, categoriesList }) => {
-    const { routes } = useContext(GlobalContext);
+    const { context } = useContext(GlobalContext);
+    const routes = context.routes;
 
     const categories = categoriesList.map((item, index) => {
         return <HomeCategory key={index} link={routes.store} id={item.id} img={item.img} name={item.name} />;

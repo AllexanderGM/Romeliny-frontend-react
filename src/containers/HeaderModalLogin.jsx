@@ -14,7 +14,8 @@ import GlobalContext from "../context/GlobalContext.jsx";
 // Component principal
 const HeaderModalLogin = ({ loginShow, loginHandleClose }) => {
     // data optenida del contexto global
-    const { routes } = useContext(GlobalContext);
+    const { context } = useContext(GlobalContext);
+    const routes = context.routes;
 
     return (
         <Modal show={loginShow} onHide={loginHandleClose} backdrop="static" keyboard={false}>

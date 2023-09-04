@@ -7,7 +7,8 @@ import GlobalContext from "../context/GlobalContext";
 
 // Principal component
 const HomeAbout = ({ img, title, logo, text, whatsapp, facebook, instagram, linkedin }) => {
-    const { links } = useContext(GlobalContext);
+    const { context } = useContext(GlobalContext);
+    const links = context.links;
 
     return (
         <section className="about" style={{ backgroundImage: `url(${img})` }}>

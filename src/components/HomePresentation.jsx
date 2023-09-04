@@ -9,7 +9,8 @@ import GlobalContext from "../context/GlobalContext";
 // Principal component
 const HomePresentation = ({ caption, text1, text2, btn, img }) => {
     // Data aptenida del contexto global
-    const { routes } = useContext(GlobalContext);
+    const { context } = useContext(GlobalContext);
+    const routes = context.routes;
 
     return (
         <section className="presentation">

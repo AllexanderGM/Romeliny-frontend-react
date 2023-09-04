@@ -15,7 +15,9 @@ import imgLogoWhite from "../assets/img/logowhite.webp";
 
 const Footer = () => {
     // Data obtenida del contexto glabal
-    const { routes, links } = useContext(GlobalContext);
+    const { context } = useContext(GlobalContext);
+    const routes = context.routes;
+    const links = context.links;
 
     return (
         <footer>

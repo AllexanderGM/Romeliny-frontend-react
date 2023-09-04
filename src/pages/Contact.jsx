@@ -19,7 +19,8 @@ import "../styles/pages/contact.scss";
 
 //* Principal Component *//
 const Contact = () => {
-    const { links } = useContext(GlobalContext);
+    const { context } = useContext(GlobalContext);
+    const links = context.links;
 
     return (
         <>

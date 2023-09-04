@@ -11,7 +11,8 @@ import GlobalContext from "../../context/GlobalContext.jsx";
 // Principal component
 const HeaderCenter = ({ nav }) => {
     // Datos obtenidos del contexto
-    const { routes } = useContext(GlobalContext);
+    const { context } = useContext(GlobalContext);
+    const routes = context.routes;
 
     return (
         <nav className="header_center">

@@ -16,8 +16,9 @@ import AsideSectionSocial from "../components/molecules/AsideSectionSocial.jsx";
 
 // Principal component
 const AsideLeft = ({ asideShow, asideHandleClose }) => {
-    const { routes } = useContext(GlobalContext);
-    const { links } = useContext(GlobalContext);
+    const { context } = useContext(GlobalContext);
+    const routes = context.routes;
+    const links = context.links;
 
     return (
         <Offcanvas show={asideShow} onHide={asideHandleClose} className="aside_left">

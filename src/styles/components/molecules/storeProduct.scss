@@ -13,7 +13,7 @@
         text-align: center;
         border: 1px solid var(--neutral);
         border-radius: 10px;
-        padding: 20px 30px;
+        padding: 0;
         margin: 30px 0;
         transition: 0.2s;
 
@@ -31,6 +31,8 @@
             font-size: 1.8rem;
             font-weight: 400;
             align-self: flex-start;
+            margin-top: 0;
+            margin-bottom: 2rem;
         }
 
         p {
@@ -49,42 +51,58 @@
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            width: 260px;
-            height: 200px;
-            border: 1px solid var(--neutral);
-            border-radius: 10px;
+            width: 100%;
+            height: 250px;
+            border-bottom: 1px solid var(--neutral);
+            border-radius: 10px 10px 0 0;
+            margin: 0;
 
             img {
                 width: 100%;
+                margin: 0;
             }
         }
 
-        @include storeProductContainer;
-
-        .product_price .price {
-            font-size: 2.2rem;
-            color: var(--neutralDark);
-        }
-
-        .product_btn {
+        .container_info {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            font-size: 1.4rem;
-            color: var(--light);
-            height: 50px;
-            width: 150px;
-            background-color: var(--primary);
-            border-radius: 5px;
-            border: none;
-            transition: 0.2s;
+            justify-content: space-between;
+            width: 100%;
+            padding: 20px;
+            margin: 0;
 
-            &:hover {
-                cursor: pointer;
-                background-color: var(--primaryHover);
-                box-shadow: 0px 0px 18px var(--neutral);
+            @include storeProductContainer;
+
+            .product_description {
+                display: none;
+            }
+
+            .product_price .price {
+                font-size: 2.2rem;
+                color: var(--neutralDark);
+            }
+
+            .product_btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+                font-size: 1.4rem;
+                color: var(--light);
+                height: 50px;
+                width: 150px;
+                background-color: var(--primary);
+                border-radius: 10px;
+                border: none;
                 transition: 0.2s;
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: var(--primaryHover);
+                    box-shadow: 0px 0px 18px var(--neutral);
+                    transition: 0.2s;
+                }
             }
         }
     }

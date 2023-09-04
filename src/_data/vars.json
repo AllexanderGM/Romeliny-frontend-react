@@ -1,7 +1,14 @@
 {
-    "url_api": "http://localhost:8080",
-    "user": true,
-    "userAdmin": true,
+    "url_api": "https://romeliny-dev.fl0.io/api",
+
+    "user": {
+        "name": "",
+        "email": "",
+        "age": 0,
+        "phone": "",
+        "active": false,
+        "admin": false
+    },
 
     "routes": {
         "home": "/",

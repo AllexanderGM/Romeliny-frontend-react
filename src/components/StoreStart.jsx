@@ -9,7 +9,7 @@ import StoreCategory from "./atoms/StoreCategory";
 const StoreStart = ({ title, bannersList }) => {
     return (
         <section className="start">
-            <StoreCarousel bannersList={bannersList} />
+            {/* <StoreCarousel bannersList={bannersList} /> */}
 
             <h1 className="start_title">{title}</h1>
 

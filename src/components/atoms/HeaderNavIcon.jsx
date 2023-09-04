@@ -8,7 +8,8 @@ import GlobalContext from "../../context/GlobalContext";
 // Principal component
 const HeaderNavIcon = () => {
     // Información tomada del contexto
-    const { routes } = useContext(GlobalContext);
+    const { context } = useContext(GlobalContext);
+    const routes = context.routes;
 
     return (
         <>
