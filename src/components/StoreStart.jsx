@@ -1,4 +1,5 @@
 // Dependencies
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
 // Components
@@ -6,7 +7,21 @@ import StoreCarousel from "./molecules/StoreCarousel";
 import StoreCategory from "./atoms/StoreCategory";
 
 // Principal component
-const StoreStart = ({ title, bannersList }) => {
+const StoreStart = ({ title, bannersList, products }) => {
+    const [categories, setCategories] = useState([]);
+    useEffect(() => {
+        const categoriesList = products
+            .map((product) => product.category)
+            .filter((element, index, self) => {
+                return self.indexOf(element) === index;
+            })
+            .map((category, index) => {
+                return <StoreCategory key={index} text={category} />;
+            });
+
+        setCategories(categoriesList);
+    }, [products]);
+
     return (
         <section className="start">
             {/* <StoreCarousel bannersList={bannersList} /> */}
@@ -15,12 +30,7 @@ const StoreStart = ({ title, bannersList }) => {
 
             <div className="start_separator"></div>
 
-            <ul className="categories">
-                <StoreCategory text="Todos" />
-                <StoreCategory text="Formal" />
-                <StoreCategory text="Casual" />
-                <StoreCategory text="Deportivo" />
-            </ul>
+            <ul className="categories">{categories}</ul>
         </section>
     );
 };

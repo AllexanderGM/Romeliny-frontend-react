@@ -14,7 +14,47 @@ const LoginForm = () => {
     const { context, setContext } = useContext(GlobalContext);
     const url_api = context.url_api;
 
-    const login = (event) => {
+    async function login(data) {
+        let dataResponse = null;
+
+        const optionsFetch = {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+        };
+
+        try {
+            const response = await fetch(`${url_api}/login`, optionsFetch);
+            dataResponse = await response.json();
+        } catch (error) {
+            console.error("Error al autenticarse con el servidor:", error);
+        }
+
+        try {
+            const user = dataResponse.user;
+            const isActive = dataResponse.session;
+            const dataUser = {
+                name: user.fullname,
+                email: user.email,
+                age: user.age,
+                phone: user.phone,
+                active: isActive,
+                admin: user.admin,
+            };
+
+            setContext({
+                ...context,
+                user: dataUser,
+            });
+            navigate("/user");
+        } catch (error) {
+            console.error("Error al iniciar sesión:", error);
+        }
+    }
+
+    const HandlerLogin = (event) => {
         event.preventDefault();
 
         const loginData = {
@@ -22,36 +62,11 @@ const LoginForm = () => {
             password: event.target.loginPassword.value,
         };
 
-        fetch(`${url_api}/login`, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(loginData),
-        })
-            .then((response) => {
-                if (!response.ok) {
-                    throw new Error("Error de red o servidor");
-                }
-                return response.json();
-            })
-            .then((data) => {
-                const user = data.user;
-                const isActive = data.session;
-
-                setContext({
-                    ...context,
-                    user: { name: user.fullname, email: user.email, age: user.age, phone: user.phone, active: isActive, admin: user.admin },
-                });
-                navigate("/user");
-            })
-            .catch((error) => {
-                console.error("Error al iniciar sesión:", error);
-            });
+        login(loginData);
     };
 
     return (
-        <form className="login_form" action="POST" onSubmit={login}>
+        <form className="login_form" action="POST" onSubmit={HandlerLogin}>
             <InputForm text="Correo" input="loginEmail" type="mail" placeholder=" ejemplo@romeliny.com" autoComplete="on" />
             <InputForm text="Contraseña" input="loginPassword" type="password" placeholder=" * * * * * * " autoComplete="off" />
             <button type="submit">Ingresar</button>

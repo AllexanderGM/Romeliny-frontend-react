@@ -1,7 +1,18 @@
-const MassiveMail = () => {
-  return (
-    <div>MassiveMail</div>
-  )
-}
+//* Components *//
+// General
+import LoadingPage from "../../containers/LoadingPage.jsx";
+import Header from "../../containers/Header.jsx";
+import Footer from "../../containers/Footer.jsx";
 
-export default MassiveMail
+const MassiveMail = () => {
+    return (
+        <>
+            <LoadingPage />
+            <Header />
+            <main> MassiveMail</main>
+            <Footer />
+        </>
+    );
+};
+
+export default MassiveMail;

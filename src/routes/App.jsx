@@ -32,8 +32,8 @@ import GlobalContext from "../context/GlobalContext.jsx";
 function App() {
     const { context } = useContext(GlobalContext);
 
-    const user = context.user;
-    const userAdmin = context.userAdmin;
+    const user = /* context.user */ true;
+    const userAdmin = /* context.userAdmin */ true;
 
     return (
         <BrowserRouter>
@@ -52,13 +52,13 @@ function App() {
                 <Route exact path="/cart" element={user ? <Cart /> : <Home />} />
 
                 {/* Admin */}
-                <Route exact path="/dashboard" element={userAdmin ? <Dashboard /> : <Home />} />
-                <Route exact path="/products" element={userAdmin ? <Products /> : <Home />} />
-                <Route exact path="/users" element={userAdmin ? <Users /> : <Home />} />
-                <Route exact path="/carts" element={userAdmin ? <Carts /> : <Home />} />
-                <Route exact path="/updatedata" element={userAdmin ? <UpdateData /> : <Home />} />
-                <Route exact path="/massivemail" element={userAdmin ? <MassiveMail /> : <Home />} />
-                <Route exact path="/changebanners" element={userAdmin ? <ChangeBanners /> : <Home />} />
+                <Route exact path="/dashboard" element={user && userAdmin ? <Dashboard /> : <Home />} />
+                <Route exact path="/products" element={user && userAdmin ? <Products /> : <Home />} />
+                <Route exact path="/users" element={user && userAdmin ? <Users /> : <Home />} />
+                <Route exact path="/carts" element={user && userAdmin ? <Carts /> : <Home />} />
+                <Route exact path="/updatedata" element={user && userAdmin ? <UpdateData /> : <Home />} />
+                <Route exact path="/massivemail" element={user && userAdmin ? <MassiveMail /> : <Home />} />
+                <Route exact path="/changebanners" element={user && userAdmin ? <ChangeBanners /> : <Home />} />
             </Routes>
         </BrowserRouter>
     );

@@ -22,7 +22,7 @@
             max-width: 132rem;
             height: 8rem;
             background-color: var(--light);
-            z-index: 1;
+            z-index: 100;
             margin: auto;
 
             @include headerLeft;

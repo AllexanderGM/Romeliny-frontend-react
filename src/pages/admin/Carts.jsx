@@ -1,7 +1,18 @@
-const Carts = () => {
-  return (
-    <div>Carts</div>
-  )
-}
+//* Components *//
+// General
+import LoadingPage from "../../containers/LoadingPage.jsx";
+import Header from "../../containers/Header.jsx";
+import Footer from "../../containers/Footer.jsx";
 
-export default Carts
+const Carts = () => {
+    return (
+        <>
+            <LoadingPage />
+            <Header />
+            <main>Carts</main>
+            <Footer />
+        </>
+    );
+};
+
+export default Carts;

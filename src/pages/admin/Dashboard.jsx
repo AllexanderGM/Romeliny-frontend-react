@@ -1,7 +1,18 @@
-const Dashboard = () => {
-  return (
-    <div>Dashboard</div>
-  )
-}
+//* Components *//
+// General
+import LoadingPage from "../../containers/LoadingPage.jsx";
+import Header from "../../containers/Header.jsx";
+import Footer from "../../containers/Footer.jsx";
 
-export default Dashboard
+const Dashboard = () => {
+    return (
+        <>
+            <LoadingPage />
+            <Header />
+            <main> Dashboard</main>
+            <Footer />
+        </>
+    );
+};
+
+export default Dashboard;

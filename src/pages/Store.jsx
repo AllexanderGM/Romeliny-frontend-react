@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+// Dependencies
+import { useState, useEffect, useContext } from "react";
 
 //* --- | Components | --- *//
 // General
@@ -9,19 +10,23 @@ import Footer from "../containers/Footer.jsx";
 // Content
 import StoreStart from "../components/StoreStart.jsx";
 import StoreProducts from "../components/StoreProducts.jsx";
+import GlobalContext from "../context/GlobalContext.jsx";
 
 //* --- | Styles | --- *//
 import "../styles/pages/store.scss";
 
 //* --- | Principal Component | --- *//
 const Store = () => {
+    const { context, setContext } = useContext(GlobalContext);
+    const url_api = context.url_api;
+
     const [products, setProducts] = useState([]);
     const [banners, setBanners] = useState([]);
 
     useEffect(() => {
         (async () => {
             try {
-                const res = await fetch("./data/products.json");
+                const res = await fetch(`${url_api}/products`);
                 const products = await res.json();
                 setProducts(products);
             } catch (error) {
@@ -43,7 +48,7 @@ const Store = () => {
             <LoadingPage />
             <Header />
             <main>
-                <StoreStart title="CATEGORIAS" bannersList={banners} />
+                <StoreStart title="CATEGORIAS" bannersList={banners} products={products}/>
                 <StoreProducts products={products} />
             </main>
             <Footer />

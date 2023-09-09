@@ -15,7 +15,14 @@ import imgRegistro from "../assets/img/registro.jpg";
 
 //* Principal Component *//
 const NotFound = () => {
-    return <div>NotFound</div>;
+    return (
+        <>
+            <LoadingPage />
+            <Header />
+            <main>NotFound</main>
+            <Footer />
+        </>
+    );
 };
 
 // export component
