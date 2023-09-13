@@ -137,6 +137,17 @@ html {
     padding-bottom: 67.42rem;
 }
 
+.fade.modal.show {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+
+    .modal-content {
+        min-width: 40rem;
+        border-radius: 20px;
+    }
+}
+
 @media (min-width: 800px) {
     .body {
         padding-bottom: 28.6rem;

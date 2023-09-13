@@ -24,4 +24,11 @@
             display: block;
         }
     }
+
+    @media (min-width: 800px) {
+        .header_center {
+            position: absolute;
+            width: 100%;
+        }
+    }
 }

@@ -3,16 +3,21 @@ import PropTypes from "prop-types";
 
 // Components
 import StoreProduct from "./molecules/StoreProduct.jsx";
+import Spinner from "react-bootstrap/Spinner";
 
 // Component principal
 const StoreProducts = ({ products }) => {
     let listProducts = [];
+    let containterClass = "products";
 
     if (products.length === 0) {
-        listProducts = <h3 className="loading">Cargando...</h3>;
+        containterClass = "products exception";
+        listProducts = <Spinner animation="border" />;
     } else if (Object.values(products[0]).length === 1) {
+        containterClass = "products exception";
         listProducts = <h3 className="error">Ups... tenemos un error. {products[0].error} </h3>;
     } else {
+        containterClass = "products";
         listProducts = products.map((item, index) => {
             return (
                 <StoreProduct
@@ -29,7 +34,7 @@ const StoreProducts = ({ products }) => {
         });
     }
 
-    return <section className="products">{listProducts}</section>;
+    return <section className={containterClass}>{listProducts}</section>;
 };
 
 // Validation component

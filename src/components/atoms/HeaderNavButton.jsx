@@ -2,11 +2,11 @@
 import PropTypes from "prop-types";
 
 // Component principal
-const HeaderNavButton = ({ loginHandleShow }) => {
+const HeaderNavButton = ({ loginHandleShow, loginButton, classButton }) => {
     return (
         <li>
-            <button className="header_nav_item" onClick={loginHandleShow}>
-                <ion-icon class="open_login" name="person-circle-outline"></ion-icon>
+            <button className={classButton} onClick={loginHandleShow}>
+                {loginButton}
             </button>
         </li>
     );

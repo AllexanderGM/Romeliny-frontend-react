@@ -14,6 +14,10 @@ const LoginForm = () => {
     const { context, setContext } = useContext(GlobalContext);
     const url_api = context.url_api;
 
+    window.sessionStorage.setItem(1, url_api);
+
+    /* console.log(window.sessionStorage); */
+
     async function login(data) {
         let dataResponse = null;
 

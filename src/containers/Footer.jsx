@@ -74,7 +74,7 @@ const Footer = () => {
                 </section>
 
                 <section className="footer_duty">
-                    <p>COPYRIGHT © 2022 ROMELINY TODOS LOS DERECHOS RESERVADOS</p>
+                    <p>COPYRIGHT © 2023 ROMELINY TODOS LOS DERECHOS RESERVADOS</p>
                 </section>
             </section>
         </footer>

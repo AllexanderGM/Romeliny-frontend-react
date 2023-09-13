@@ -1,5 +1,6 @@
 // Dependencies
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { useNavigate } from "react-router-dom";
 
 // Components
 import HeaderLeft from "../components/molecules/HeaderLeft";
@@ -12,8 +13,28 @@ import HeaderNavIcon from "../components/atoms/HeaderNavIcon.jsx";
 import AsideLeft from "../containers/AsideLeft.jsx";
 import HeaderModalLogin from "../containers/HeaderModalLogin";
 
+// Context
+import GlobalContext from "../context/GlobalContext.jsx";
+
 // Principal component
 const Header = () => {
+    const navigate = useNavigate();
+
+    const { context } = useContext(GlobalContext);
+    const activeUser = context.user.active;
+
+    const ButtonRegister = (
+        <li>
+            <button className="header_nav_item active register" onClick={() => navigate("/register")}>
+                Registrarse
+            </button>
+        </li>
+    );
+
+    let loginButton;
+    let classButton;
+    let carButton;
+
     // Estado para abrir y cerrar el aside y login
     const [asideShow, setAsideShow] = useState(false);
     const [loginShow, setLoginShow] = useState(false);
@@ -24,6 +45,16 @@ const Header = () => {
 
     const loginHandleClose = () => setLoginShow(false);
     const loginHandleShow = () => setLoginShow(true);
+
+    if (activeUser) {
+        loginButton = <ion-icon class="open_login" name="person-circle-outline"></ion-icon>;
+        classButton = "header_nav_item";
+        carButton = <HeaderNavIcon />;
+    } else {
+        loginButton = "Iniciar sesion";
+        classButton = "header_nav_item active";
+        carButton = ButtonRegister;
+    }
 
     return (
         <>
@@ -38,8 +69,8 @@ const Header = () => {
                     <HeaderCenter nav={["Inicio", "Tienda", "Contáctanos"]} />
 
                     <HeaderRigth>
-                        <HeaderNavButton loginHandleShow={loginHandleShow} />
-                        <HeaderNavIcon />
+                        <HeaderNavButton loginHandleShow={loginHandleShow} loginButton={loginButton} classButton={classButton} />
+                        {carButton}
                     </HeaderRigth>
                 </section>
             </header>
