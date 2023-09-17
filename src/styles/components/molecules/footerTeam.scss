@@ -18,8 +18,14 @@
             justify-content: center;
             gap: 1.5rem;
             margin-top: 2rem;
-           
+
             @include linkIcon;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .developer {
+            margin: 0 2rem;
         }
     }
 }

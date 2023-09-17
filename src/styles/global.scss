@@ -5,6 +5,11 @@
 @import "./containers/headerModalLogin.scss";
 @import "./containers/asideLeft.scss";
 
+/* admin */
+
+@import "./containers/asideRigthDashboard.scss";
+@import "./containers/asideLeftDashboard.scss";
+
 /* Fonts */
 
 @font-face {
@@ -69,6 +74,8 @@ html {
             @include loadingPage;
             @include header;
             @include footer;
+            @include asideRigthDashboard;
+            @include asideLeftDashboard;
 
             main {
                 display: flex;

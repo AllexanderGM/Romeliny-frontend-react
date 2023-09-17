@@ -52,6 +52,16 @@ const Contact = () => {
                         text="Recuerda antes de enviar un mensaje identificarte y agregar el asunto. Esperamos tu mensaje."
                     />
                 </section>
+
+                <div
+                    className="badge-base LI-profile-badge"
+                    data-locale="es_ES"
+                    data-size="medium"
+                    data-theme="dark"
+                    data-type="VERTICAL"
+                    data-vanity="jeisson-alexander"
+                    data-version="v1"
+                ></div>
             </main>
             <Footer />
         </>

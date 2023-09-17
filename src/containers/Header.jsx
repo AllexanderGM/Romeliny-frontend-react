@@ -65,7 +65,6 @@ const Header = () => {
                         <Logo />
                     </HeaderLeft>
 
-                    {/* <HeaderCenter nav={["Inicio", "Tienda", "Contáctanos", "Información"]} /> */}
                     <HeaderCenter nav={["Inicio", "Tienda", "Contáctanos"]} />
 
                     <HeaderRigth>

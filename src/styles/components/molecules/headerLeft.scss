@@ -6,6 +6,7 @@
         display: flex;
         align-items: flex-end;
         margin-left: 3rem;
+        z-index: 100;
 
         @include btnMenu;
         @include logo;

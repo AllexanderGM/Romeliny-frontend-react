@@ -6,13 +6,13 @@ import PropTypes from "prop-types";
 import AsideSeparator from "../components/atoms/AsideSeparator.jsx";
 import AsideLogo from "../components/molecules/AsideLogo.jsx";
 import AsideSection from "../components/molecules/AsideSection.jsx";
+import AsideSectionSocial from "../components/molecules/AsideSectionSocial.jsx";
 
 // Components bootstrap
 import Offcanvas from "react-bootstrap/Offcanvas";
 
 // Context
 import GlobalContext from "../context/GlobalContext.jsx";
-import AsideSectionSocial from "../components/molecules/AsideSectionSocial.jsx";
 
 // Principal component
 const AsideLeft = ({ asideShow, asideHandleClose }) => {

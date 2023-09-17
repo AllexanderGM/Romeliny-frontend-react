@@ -20,7 +20,6 @@ const HeaderCenter = ({ nav }) => {
                 <HeaderNavItem link={routes.home} text={nav[0]} />
                 <HeaderNavItem link={routes.store} text={nav[1]} />
                 <HeaderNavItem link={routes.contact} text={nav[2]} />
-                {/* <HeaderNavItem link={routes.about} text={nav[3]} /> */}
             </ul>
         </nav>
     );

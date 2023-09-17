@@ -24,7 +24,7 @@
         "fullRegister": "/fullregister",
         "cart": "/cart",
 
-        "admin": "/admin",
+        "admin": "/dashboard",
         "products": "/products",
         "users": "/users",
         "carts": "/carts"

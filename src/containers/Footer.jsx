@@ -50,9 +50,11 @@ const Footer = () => {
                         ]}
                     />
 
+                    <FooterSeparator />
+
                     <article className="team">
                         <FooterTeam
-                            role="Diseñadora"
+                            role="Diseñadora gráfica"
                             name="Liliana Camargo"
                             people={[
                                 { link: links.designer.instagram, icon: "logo-instagram" },
