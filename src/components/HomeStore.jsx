@@ -1,12 +1,19 @@
 // Dependencies
+import { useContext } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 // Components
 import HomeSotreWholesale from "./molecules/HomeSotreWholesale.jsx";
 
+// Context
+import GlobalContext from "../context/GlobalContext.jsx";
+
 // Principal components
 const HomeStore = ({ img, icon, title, text, btn, infoWholesale }) => {
+    const { context } = useContext(GlobalContext);
+    const routes = context.routes;
+
     return (
         <section className="store">
             <article className="store_initial">
@@ -21,7 +28,7 @@ const HomeStore = ({ img, icon, title, text, btn, infoWholesale }) => {
 
                     <p>{text}</p>
 
-                    <Link className="presentation_btn" to="#about">
+                    <Link className="presentation_btn" to={routes.store}>
                         {btn}
                     </Link>
 
