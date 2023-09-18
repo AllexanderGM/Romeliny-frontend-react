@@ -6,6 +6,7 @@ import Footer from "../containers/Footer.jsx";
 
 // Content
 import HomePresentation from "../components/HomePresentation.jsx";
+import HomeStore from "../components/HomeStore.jsx";
 import HomeCategories from "../components/HomeCategories.jsx";
 import HomeProducts from "../components/HomeProducts.jsx";
 import HomeAbout from "../components/HomeAbout.jsx";
@@ -17,6 +18,8 @@ import "../styles/pages/home.scss";
 import imgPresentation from "../assets/img/imgmain.webp";
 import backgroundAbout from "../assets/img/bgabout.webp";
 import logoCircle from "../assets/img/logocircle.webp";
+
+import homeStoreImg from "../assets/img/homeStore.jpg";
 
 import casual from "../assets/img/casual.jpg";
 import formal from "../assets/img/formal.jpg";
@@ -47,7 +50,7 @@ const Home = () => {
                     img={imgPresentation}
                 />
 
-                <HomeCategories
+                {/* <HomeCategories
                     title="COMPRAR POR CATEGORIAS"
                     categoriesList={[
                         {
@@ -66,10 +69,25 @@ const Home = () => {
                             name: "Deportivo",
                         },
                     ]}
+                /> */}
+
+                <HomeStore
+                    img={homeStoreImg}
+                    icon="storefront"
+                    title="Descubre Nuestros Productos"
+                    text="Nuestra pasion es la fabricación de calzado elegante que combina estilo y comodidad. Nuestros zapatos están
+                        diseñados para que puedas destacar en cualquier ocasión."
+                    btn="Ir a la Tienda"
+                    infoWholesale={{
+                        icon: "bag-handle-outline",
+                        title: "Compra Mayorista",
+                        text: "¿Estás buscando surtir tu tienda con productos de calidad? Ofrecemos excelentes opciones. ¡Contáctanos para obtener más información!",
+                        btn: "Contáctanos",
+                    }}
                 />
 
                 <HomeProducts
-                    title="NUESTROS PRODUCTOS"
+                    title="NUESTRA DISTINCIÓN"
                     text={[
                         "Nos preocupamos por realizar productos",
                         "de excelente calidad confeccionados",

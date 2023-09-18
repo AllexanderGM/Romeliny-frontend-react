@@ -29,6 +29,8 @@ const StoreProducts = ({ products }) => {
                     code={item.code}
                     stock={item.stock}
                     price={item.price}
+                    colors={["white", "green", "red", "blue", "black"]}
+                    sizes={[36, 37, 38, 39, 40, 41, 42, 43, 44, 45]}
                 />
             );
         });

@@ -4,7 +4,6 @@
         color: var(--light);
         text-align: center;
         width: 100vw;
-        margin-bottom: 7rem;
 
         .about_gradient {
             display: flex;
@@ -42,7 +41,33 @@
                     margin: 0 auto;
                 }
 
+                .about_btn {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0 1rem;
+                    list-style: none;
+
+                    font-size: 1.5rem;
+                    color: var(--neutral);
+                    background-color: transparent;
+                    border: 1px solid var(--neutral);
+                    border-radius: 3rem;
+
+                    padding: 0.8rem 2rem;
+                    margin: 2rem;
+                    transition: 0.3s;
+
+                    &:hover {
+                        background-color: var(--neutral);
+                        color: var(--neutralDark);
+                        transition: 0.3s;
+                    }
+                }
+
                 .about_social {
+                    display: flex;
                     margin: 20px 0;
 
                     a {
@@ -77,6 +102,10 @@
                         margin-bottom: 30px;
                     }
 
+                    .about_btn {
+                        margin-top: 1rem;
+                    }
+
                     .about_logo {
                         position: absolute;
                         top: 0px;
@@ -89,7 +118,6 @@
 
     @media (min-width: 1024px) {
         .about .about_gradient .about_article {
-            padding-left: 70rem;
             padding-top: 100px;
             padding-bottom: 100px;
 

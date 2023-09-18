@@ -39,17 +39,6 @@ const AsideLeft = ({ asideShow, asideHandleClose }) => {
             <AsideSeparator />
 
             <AsideSection
-                title="Categorias"
-                listItems={[
-                    { text: "Formal", route: routes.store, icon: "bag-outline" },
-                    { text: "Casual", route: routes.store, icon: "footsteps-outline" },
-                    { text: "Deportivo", route: routes.store, icon: "bicycle-outline" },
-                ]}
-            />
-
-            <AsideSeparator />
-
-            <AsideSection
                 title="Acerca de Romeliny"
                 listItems={[
                     { text: "Información corporativa", route: routes.corporateInformation, icon: "diamond-outline" },

@@ -29,9 +29,9 @@ const HomePresentation = ({ caption, text1, text2, btn, img }) => {
                     {text2}
                 </p>
 
-                <Link className="presentation_btn" to={routes.contact}>
+                <a className="presentation_btn" href="#about">
                     {btn}
-                </Link>
+                </a>
             </article>
 
             <figure className="presentation_image">

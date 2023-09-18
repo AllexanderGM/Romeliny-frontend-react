@@ -31,11 +31,24 @@
     }
 
     @media (min-width: 800px) {
-        .start .start_separator {
-            align-self: center;
-            margin: 3rem;
-            width: 100%;
-            max-width: 15rem;
+        .start {
+            position: sticky;
+            top: 12rem;
+            align-items: flex-end;
+            max-width: 24rem;
+            border-right: 1px solid var(--darkNeutral);
+            padding-right: 2rem;
+            padding-left: 2rem;
+
+            .start_title {
+                margin-top: 0rem;
+            }
+
+            .start_separator {
+                margin: 2rem 0;
+                width: 100%;
+                max-width: 15rem;
+            }
         }
     }
 }

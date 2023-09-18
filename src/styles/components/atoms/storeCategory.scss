@@ -58,13 +58,20 @@
 
             [class^="category_btn"]:hover {
                 cursor: pointer;
-                box-shadow: 0px 8px 16px #939393;
+                border-bottom: 1px solid var(--neutralDark);
                 transition: 0.2s;
             }
+        }
+    }
 
-            [class^="category_btn"]:active {
-                border: 1px solid var(--primary);
-                transition: 0.2s;
+    @media (min-width: 800px) {
+        .categories {
+            flex-direction: column;
+            height: auto;
+
+            .category .category_btn {
+                justify-content: flex-end;
+                padding: 1rem 2rem;
             }
         }
     }

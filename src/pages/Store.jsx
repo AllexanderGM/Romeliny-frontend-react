@@ -47,7 +47,7 @@ const Store = () => {
         <>
             <LoadingPage />
             <Header />
-            <main>
+            <main className="page_store">
                 <StoreStart title="CATEGORIAS" bannersList={banners} products={products} />
                 <StoreProducts products={products} />
             </main>

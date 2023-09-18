@@ -14,3 +14,12 @@ main {
     @include storeStart;
     @include storeProducts;
 }
+
+@media (min-width: 800px) {
+    #root main.page_store {
+        padding-top: 100px;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+    }
+}

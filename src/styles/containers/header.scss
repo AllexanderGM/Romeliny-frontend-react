@@ -3,7 +3,7 @@
 @import "../components/molecules/headerRigth.scss";
 
 @mixin header {
-    header {
+    .header {
         position: fixed;
         display: flex;
         align-items: center;
@@ -12,6 +12,23 @@
         height: 8rem;
         background-color: var(--light);
         z-index: 1;
+
+        &.scrolled {
+            background: #f7f4efc5;
+            border-bottom: 1px solid #3b3e4323;
+            box-shadow: 0 4px 30px #0000001a;
+            backdrop-filter: blur(7.6px);
+            -webkit-backdrop-filter: blur(7.6px);
+
+            section {
+                background-color: transparent;
+                transition: 0.2s;
+
+                .header_rigth.header_list.header_nav_item.active {
+                    background-color: var(--light);
+                }
+            }
+        }
 
         section {
             position: fixed;
@@ -24,6 +41,7 @@
             background-color: var(--light);
             z-index: 100;
             margin: auto;
+            transition: 0.2s;
 
             & > * {
                 margin-bottom: 0;

@@ -4,19 +4,22 @@ import PropTypes from "prop-types";
 
 // Context
 import GlobalContext from "../context/GlobalContext";
+import { Link } from "react-router-dom";
 
 // Principal component
 const HomeAbout = ({ img, title, logo, text, whatsapp, facebook, instagram, linkedin }) => {
     const { context } = useContext(GlobalContext);
     const links = context.links;
+    const routes = context.routes;
 
     return (
-        <section className="about" style={{ backgroundImage: `url(${img})` }}>
+        <section id="about" className="about" style={{ backgroundImage: `url(${img})` }}>
             <div className="about_gradient">
                 <article className="about_article">
                     <h1>{title}</h1>
                     <img className="about_logo" src={logo} alt="logo de romeliny en circulo" />
                     <p>{text}</p>
+                    <Link className="about_btn" to={routes.contact}>Contáctanos</Link>
                     <figure className="about_social">
                         <a href={links.whatsapp} target="_blank">
                             <img src={whatsapp} alt="link de whatsapp" />

@@ -1,5 +1,5 @@
 // Dependencies
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 // Components
@@ -22,6 +22,22 @@ const Header = () => {
 
     const { context } = useContext(GlobalContext);
     const activeUser = context.user.active;
+
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+        const onScroll = () => {
+            if (window.scrollY > 50) {
+                setScrolled(true);
+            } else {
+                setScrolled(false);
+            }
+        };
+
+        window.addEventListener("scroll", onScroll);
+
+        return () => window.removeEventListener("scroll", onScroll);
+    }, []);
 
     const ButtonRegister = (
         <li>
@@ -58,7 +74,7 @@ const Header = () => {
 
     return (
         <>
-            <header>
+            <header className={`header${scrolled ? " scrolled" : ""}`}>
                 <section>
                     <HeaderLeft>
                         <BtnMenu asideHandleShow={asideHandleShow} />
