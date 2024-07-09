@@ -16,10 +16,10 @@ const AsideLeftDashboard = () => {
     const links = context.links;
 
     return (
-        <aside className="aside_left aside__panel">
+        <aside className="aside_left">
             <h1>Panel de control</h1>
 
-            <Link className="haside__panel__btn" to={routes.admin}>
+            <Link className="btn-aside_left" to={routes.admin}>
                 <ion-icon name="cube"></ion-icon>
                 <span>Dashboard</span>
             </Link>
@@ -30,12 +30,21 @@ const AsideLeftDashboard = () => {
                 title="Administrador"
                 listItems={[
                     { text: "Productos", route: routes.products, icon: "storefront" },
-                    { text: "Usuarios", route: routes.users, icon: "people" },
-                    { text: "Carritos de compra", route: routes.carts, icon: "cart" },
+                    { text: "Volver al inicio", route: routes.home, icon: "home" },
                 ]}
             />
+            {/* 
+            <AsideSection
+                title="Administrador"
+                listItems={[
+                    { text: "Productos", route: routes.products, icon: "storefront" },
+                    { text: "Usuarios", route: routes.users, icon: "people" },
+                    { text: "Carritos de compra", route: routes.carts, icon: "cart" },
+                    { text: "Volver al inicio", route: routes.home, icon: "home" },
+                ]}
+            /> */}
 
-            <AsideSeparator />
+            {/* <AsideSeparator />
 
             <AsideSection
                 title="Sitio web"
@@ -44,19 +53,18 @@ const AsideLeftDashboard = () => {
                     { text: "Cambiar Banners", route: routes.admin, icon: "images" },
                     { text: "Enviar correo masivo", route: routes.admin, icon: "mail" },
                 ]}
-            />
+            /> */}
 
             <AsideSeparator />
 
-            <AsideSection
+            {/* <AsideSection
                 title="Otros"
                 listItems={[
-                    { text: "Volver al inicio", route: routes.home, icon: "home" },
                     { text: "Datos del chat", route: routes.store, icon: "chatbubbles" },
                     { text: "Desarrolador web", route: links.developer.web, icon: "code-slash" },
                     { text: "Diseñadora Gráfica", route: links.designer.linkedin, icon: "code-slash" },
                 ]}
-            />
+            /> */}
         </aside>
     );
 };

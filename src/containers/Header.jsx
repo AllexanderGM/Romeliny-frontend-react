@@ -41,9 +41,9 @@ const Header = () => {
 
     const ButtonRegister = (
         <li>
-            <button className="header_nav_item active register" onClick={() => navigate("/register")}>
+            {/* <button className="header_nav_item active register" onClick={() => navigate("/register")}>
                 Registrarse
-            </button>
+            </button> */}
         </li>
     );
 

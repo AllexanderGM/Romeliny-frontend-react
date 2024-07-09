@@ -16,8 +16,8 @@ const Dashboard = () => {
     return (
         <>
             <LoadingPage />
-            <AsideRigthDashboard />
             <AsideLeftDashboard />
+            <AsideRigthDashboard />
 
             <main className="dashboard">
                 <Logo />

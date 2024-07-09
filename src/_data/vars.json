@@ -1,5 +1,5 @@
 {
-    "url_api": "https://romeliny-backend-dev.fl0.io/api",
+    "url_api": "https://romeliny-backend-nodejs-dev-hfgt.4.us-1.fl0.io/api",
 
     "user": {
         "name": "",
@@ -37,7 +37,7 @@
         "whatsapp": "https://api.whatsapp.com/send/?phone=573142467055&text=Me+gustar%C3%ADa+tener+mas+informacion&type=phone_number&app_absent=0",
 
         "developer": {
-            "web": "https://www.linkedin.com/in/jeisson-alexander/",
+            "web": "https://alexandergm.com/",
             "linkedin": "https://www.linkedin.com/in/jeisson-alexander/",
             "instagram": "https://www.instagram.com/amarokdev/",
             "github": "https://github.com/Alexander206"

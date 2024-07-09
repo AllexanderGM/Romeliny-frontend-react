@@ -1,122 +1,111 @@
 // Dependencies
-import { useContext, useState } from "react";
+import { useState } from "react";
 import PropTypes from "prop-types";
+import { useLocation } from "react-router-dom";
 
 // Components
 import StoreProductContainer from "../atoms/StoreProductContainer";
 
-import GlobalContext from "../../context/GlobalContext";
-
 // Principal component
-const StoreProduct = ({ img, category, name, description, code, colors, sizes, stock, price }) => {
-    const { context } = useContext(GlobalContext);
+const StoreProduct = ({ item }) => {
     const [selectedColor, setSelectedColor] = useState("");
-    const [selectedSize, setSelectedSize] = useState("");
+    const attributesKeys = ["GENDER", "MODEL", "FOOTWEAR_MATERIAL", "OUTSOLE_MATERIAL"];
+    const location = window.location.href;
+    console.log(useLocation().pathname + "?product=" + item.id);
 
-    price = price.toLocaleString("es-CO", {
+    const imgProduct = item.variations[0].img;
+    const category = item.attributes
+        .map((item) => (attributesKeys.includes(item.id) ? item.value[0] : null))
+        .filter((item) => item !== null)
+        .join(" | ");
+
+    const uniqueImages = [];
+    const colorSet = new Set();
+
+    for (const variant of item.variations) {
+        if (!colorSet.has(variant.name)) {
+            uniqueImages.push(variant);
+            colorSet.add(variant.name);
+        }
+    }
+
+    let price = item.price.toLocaleString("es-CO", {
         style: "currency",
         currency: "COP",
     });
 
     const handleColorChange = (event) => {
         setSelectedColor(event.target.value);
+
+        console.log(event.target.value);
     };
 
-    const handleSizeChange = (event) => {
-        setSelectedSize(event.target.value);
-    };
-
-    const colorsList = colors.map((item, index) => {
-        const selected = selectedColor === item;
+    const variationsList = uniqueImages.map((item, index) => {
+        const selected = selectedColor === item.img;
 
         return (
             <li key={index}>
-                <label>
+                <label style={{ border: selected ? `1px solid var(--neutralDark)` : false }}>
                     <input
-                        style={{ color: item }}
                         type="radio"
                         name="option_color"
-                        value={item}
+                        value={item.name}
                         checked={selected}
                         onChange={handleColorChange}
                     />
-                    <ion-icon style={{ color: item, border: selected ? `1px solid var(--neutralDark)` : false }} name="ellipse"></ion-icon>
-                </label>
-            </li>
-        );
-    });
 
-    const sizesList = sizes.map((item, index) => {
-        const selected = selectedSize == item;
-
-        return (
-            <li key={index}>
-                <label style={{ color: selected ? `var(--primary)` : false, border: selected ? `1px solid var(--primary)` : false }}>
-                    <input type="radio" name="option_size" value={item} checked={selected} onChange={handleSizeChange} />
-                    {item}
+                    <img src={item.img} alt={`Imagen del producto ${item.name}`} />
                 </label>
             </li>
         );
     });
 
     return (
-        <div className="product">
+        <article className="product">
             <figure className="product_img">
-                <img src={img} alt={`Imagen del producto ${name}`} />
+                <img src={imgProduct} alt={`Imagen del producto ${item.name}`} />
             </figure>
 
-            <div className="container_info">
-                <StoreProductContainer category={category} />
+            <article className="container_info">
+                <StoreProductContainer category={category} item={item} color={selectedColor} />
 
                 <p className="product_code">
-                    <strong>REFERENCIA: </strong> {code}
+                    <strong>CÓDIGO: </strong> {item.id}
                 </p>
 
-                <div className="container_title_price">
-                    <h1 className="product_title">{name}</h1>
+                <article className="container_title_price">
+                    <h1 className="product_title">{item.name}</h1>
 
                     <p className="product_price">
                         <strong className="price">{price} </strong>
                     </p>
-                </div>
+                </article>
 
-                <p className="product_description">
-                    <strong>DESCRIPCIÓN</strong>
-                    {description}
-                </p>
+                <article className="product_form">
+                    <article className="product_options">
+                        <strong>VARIANTES DISPONIBLES</strong>
+                        <ul className="select_color">{variationsList}</ul>
+                    </article>
 
-                <form className="product_form">
-                    <div className="product_options">
-                        <strong>SELECIONA EL COLOR</strong>
-                        <ul className="select_color">{colorsList}</ul>
-                    </div>
-
-                    <div className="product_options">
-                        <strong>SELECIONA LA TALLA</strong>
-                        <ul className="select_size">{sizesList}</ul>
-                    </div>
-
-                    <a
+                    {/* <a
                         className="product_btn"
-                        href={`https://api.whatsapp.com/send/?phone=573142467055&text=Me+gustar%C3%ADa+comprar+el+producto+${name}+con+referencia+${code},+el+color+que+elegí+es+el+${selectedColor}+y+la+talla+es+${selectedSize}.+Gracias.&type=phone_number&app_absent=0`}
+                        href={`https://api.whatsapp.com/send/?phone=573142467055&text=Me+gustar%C3%ADa+comprar+el+producto+${item.name}+con+referencia+${code},+el+color+que+elegí+es+el+${selectedColor}+y+la+talla+es+${selectedSize}.+Gracias.&type=phone_number&app_absent=0`}
                     >
                         Comprar
+                    </a> */}
+
+                    <a className="product_btn" href={``}>
+                        Ver producto
                     </a>
-                </form>
-            </div>
-        </div>
+                </article>
+            </article>
+        </article>
     );
 };
 
 // Validation props
 StoreProduct.propTypes = {
-    img: PropTypes.string.isRequired,
-    category: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    code: PropTypes.string.isRequired,
-    stock: PropTypes.number.isRequired,
-    price: PropTypes.number.isRequired,
+    item: PropTypes.object.isRequired,
 };
 
 // Export component

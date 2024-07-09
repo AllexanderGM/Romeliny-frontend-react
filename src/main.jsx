@@ -1,5 +1,5 @@
 // Dependences
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import App from "./routes/App.jsx";
 
@@ -7,7 +7,8 @@ import App from "./routes/App.jsx";
 import GlobalContext from "./context/GlobalContext.jsx";
 
 // Resources
-import variables from "./_data/vars.json";
+import EncryptData from "./utils/encryptData.js";
+import vars from "./_data/vars.json";
 
 // Styles
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -21,8 +22,29 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 );
 
 function ContextcomponentGlobal() {
-    // Crea un estado
-    const [context, setContext] = useState(variables);
+    const [context, setContext] = useState(vars);
+    const [backend, setBackend] = useState({ status: "loading" });
+    const [meliCode, setMeliCode] = useState("");
+
+    useEffect(() => {
+        // Verifica la conexión con el backend
+        (async () => {
+            try {
+                const response = await fetch(`${import.meta.env.VITE_API_URL}/`);
+                const data = await response.json();
+                setBackend(data);
+                console.log("Status backend:", data);
+            } catch (error) {
+                console.error("Error al verificar el servidor:", error);
+            }
+        })();
+
+        /* // Verifica si hay un código de MercadoLibre
+        const urlParams = new URLSearchParams(window.location.search);
+        const code = urlParams.get("code");
+        console.log(code);
+        if (code) setMeliCode(code); */
+    }, []);
 
     return (
         <GlobalContext.Provider value={{ context, setContext }}>

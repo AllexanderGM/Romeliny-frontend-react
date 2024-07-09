@@ -3,11 +3,10 @@ import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
 // Components
-import StoreCarousel from "./molecules/StoreCarousel";
 import StoreCategory from "./atoms/StoreCategory";
 
 // Principal component
-const StoreStart = ({ title, bannersList, products }) => {
+const StoreStart = ({ title, products }) => {
     const [categories, setCategories] = useState([]);
     useEffect(() => {
         const categoriesList = products
@@ -24,8 +23,6 @@ const StoreStart = ({ title, bannersList, products }) => {
 
     return (
         <section className="start">
-            {/* <StoreCarousel bannersList={bannersList} /> */}
-
             <h1 className="start_title">{title}</h1>
 
             <div className="start_separator"></div>
@@ -38,7 +35,6 @@ const StoreStart = ({ title, bannersList, products }) => {
 // Validation props
 StoreStart.propTypes = {
     title: PropTypes.string.isRequired,
-    bannersList: PropTypes.array.isRequired,
 };
 
 // Export component

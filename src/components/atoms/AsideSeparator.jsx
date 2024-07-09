@@ -1,6 +1,6 @@
 // Principal component
 const AsideSeparator = () => {
-    return <div className="asideSeparator"></div>;
+    return <div className="separador-aside"></div>;
 };
 
 // Export component

@@ -1,48 +1,37 @@
-// Dependencies
+// Dependencias
 import PropTypes from "prop-types";
+import { useLocation } from "react-router-dom";
 
-// Components
+// Componentes
 import StoreProduct from "./molecules/StoreProduct.jsx";
 import Spinner from "react-bootstrap/Spinner";
 
-// Component principal
+// Componente principal
 const StoreProducts = ({ products }) => {
-    let listProducts = [];
-    let containterClass = "products";
+    const location = useLocation().pathname.split("/")[1];
+
+    let listProducts = products.map((item, index) => <StoreProduct key={index} item={item} />);
+    let containerClass = "products";
 
     if (products.length === 0) {
-        containterClass = "products exception";
+        containerClass = "products exception";
         listProducts = <Spinner animation="border" />;
-    } else if (Object.values(products[0]).length === 1) {
-        containterClass = "products exception";
+    } else if (products[0].error) {
+        containerClass = "products exception";
         listProducts = <h3 className="error">Ups... tenemos un error. {products[0].error} </h3>;
     } else {
-        containterClass = "products";
-        listProducts = products.map((item, index) => {
-            return (
-                <StoreProduct
-                    key={index}
-                    img={item.img}
-                    category={item.category}
-                    name={item.name}
-                    description={item.description}
-                    code={item.code}
-                    stock={item.stock}
-                    price={item.price}
-                    colors={["white", "green", "red", "blue", "black"]}
-                    sizes={[36, 37, 38, 39, 40, 41, 42, 43, 44, 45]}
-                />
-            );
-        });
+        listProducts = products.map((item, index) => <StoreProduct key={index} item={item} location={location} />);
     }
 
-    return <section className={containterClass}>{listProducts}</section>;
+    console.log(location);
+
+    return <section className={`${containerClass} ${location}Location`}>{listProducts}</section>;
 };
 
-// Validation component
+// Validación de propiedades del componente
 StoreProducts.propTypes = {
     products: PropTypes.array.isRequired,
 };
 
-// Export component
+// Exportar componente
 export default StoreProducts;

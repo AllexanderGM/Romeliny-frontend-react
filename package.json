@@ -13,6 +13,7 @@
     "dependencies": {
         "@picocss/pico": "^1.5.7",
         "bootstrap": "^5.2.3",
+        "crypto-js": "^4.2.0",
         "dat.gui": "^0.7.9",
         "plotly.js": "^2.26.0",
         "react": "^18.2.0",

@@ -37,7 +37,11 @@ const Contact = () => {
                                 text: "Calle 20 #24f-49 sur barrio el restrepo",
                             },
                             { icon: "call-outline", title: "LLamadas", text: "+57 314 246 70 55" },
-                            { icon: "mail-outline", title: "Correo electrónico", text: "calzadoromeliny2004@gmail.com" },
+                            {
+                                icon: "mail-outline",
+                                title: "Correo electrónico",
+                                text: "calzadoromeliny2004@gmail.com",
+                            },
                         ]}
                         social={[
                             { link: links.facebook, icon: "logo-facebook" },
@@ -52,16 +56,6 @@ const Contact = () => {
                         text="Recuerda antes de enviar un mensaje identificarte y agregar el asunto. Esperamos tu mensaje."
                     />
                 </section>
-
-                <div
-                    className="badge-base LI-profile-badge"
-                    data-locale="es_ES"
-                    data-size="medium"
-                    data-theme="dark"
-                    data-type="VERTICAL"
-                    data-vanity="jeisson-alexander"
-                    data-version="v1"
-                ></div>
             </main>
             <Footer />
         </>

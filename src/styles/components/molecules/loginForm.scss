@@ -10,6 +10,44 @@
 
         @include inputForm;
 
+        &.create_product {
+            .fotoForm__Productos {
+                position: relative;
+                display: inline-block;
+
+                input[type="file"] {
+                    display: none;
+                }
+
+                figure.iborrainputfile {
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                    background-image: "../../../assets/img/tienda.jpg";
+                    background-color: #ddd;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                }
+
+                span {
+                    display: block;
+                    text-align: center;
+                    margin-top: 8px;
+                }
+
+                ion-icon {
+                    font-size: 32px;
+                    color: #333;
+                }
+
+                input[type="file"] + figure + span {
+                    display: none;
+                }
+            }
+        }
+
         button {
             margin: 20px;
             height: 40px;
